@@ -1,0 +1,45 @@
+// COLOR VARIABLES
+$color-primary: #bada55;
+
+$color-light: #fff;
+$text-dark: #222;
+$text-light: #fff;
+
+// FONT VARIABLES
+
+// SPACING VARIABLES
+
+// RESPONSIVE BREAKPOINTS
+$bp-lg: 80em; //1280px
+$bp-md: 60em; //960px
+$bp-sm: 37.5em; //600px
+
+// CONTAINERS
+
+// CONTAINER SHADOW
+.box-shadow {
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+// BASICS
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: lightblue;
+}
+
+ul {
+  list-style: none;
+}

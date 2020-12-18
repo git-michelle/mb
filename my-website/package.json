@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "compile:sass": "node-sass sass/main.scss src/App.scss -w"
+    "sass": "node-sass sass/main.scss src/App.scss -w",
+    "dev": "concurrently \"npm start\" \"npm run sass\" "
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "node-sass": "^4.14.1"
   }
 }

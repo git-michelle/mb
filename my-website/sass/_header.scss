@@ -1,0 +1,40 @@
+.nav {
+  background: transparent;
+  width: 100%;
+  height: 7rem;
+  position: relative;
+
+  &-content {
+    background-color: yellow;
+    max-width: 96rem;
+    margin: auto;
+    padding: 1rem 2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      background-color: lightgreen;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        padding: 1rem 2.25rem;
+
+        .nav-link {
+          text-decoration: none;
+          color: $text-dark;
+          font-size: 1.6rem;
+          background-color: violet;
+          border-bottom: 0.45rem transparent solid; //so on hover it changes color without pushing stuff down
+          transition: border-color 0.5s;
+          &:hover {
+            border-color: navy;
+          }
+        }
+      }
+    }
+  }
+}
