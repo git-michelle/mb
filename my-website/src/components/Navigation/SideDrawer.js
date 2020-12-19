@@ -13,7 +13,7 @@ const SideDrawer = (props) => {
     <Fragment>
       <Backdrop show={props.open} clicked={props.closed} />
       <div className={attachedClasses.join(" ")}>
-        <Link to="/more">
+        <Link to="/">
           <img
             className="logo"
             src="/images/logo-m.png"

@@ -6,18 +6,61 @@ h3 {
 h2,
 h3,
 h4 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.2; }
 
 p,
 li {
   font-family: "Hind", sans-serif;
-  font-size: 1.6rem; }
+  font-size: 1.8rem;
+  line-height: 1.6; }
 
 .body-text {
   font-size: 1.6rem; }
 
+h1 {
+  font-size: 9rem; }
+
+h2 {
+  font-size: 3rem; }
+
+h3 {
+  font-size: 2rem; }
+
+.section-heading {
+  margin-bottom: 3rem; }
+
+.container-centered-content {
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 12rem; }
+
+.container-flex {
+  display: flex;
+  justify-content: center; }
+
+.full-width {
+  max-width: 100%; }
+
 .box-shadow {
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25); }
+
+.btn-outline {
+  display: inline-block;
+  text-decoration: none;
+  color: #222;
+  width: 21rem;
+  min-height: 5rem;
+  padding: 1rem 2rem;
+  border: 0.3rem solid #689751;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  overflow: hidden;
+  margin-top: 3rem;
+  transition: all 0.3s; }
+  .btn-outline:hover {
+    background-color: #689751; }
 
 *,
 *::before,
@@ -31,16 +74,18 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: lightblue; }
+  background-color: #fff; }
 
 ul {
   list-style: none; }
 
 .nav {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
   width: 100%;
   height: 7rem;
-  position: relative; }
+  position: fixed;
+  top: 0;
+  z-index: 50; }
   .nav-content {
     max-width: 96rem;
     margin: auto;
@@ -48,8 +93,6 @@ ul {
     overflow: hidden;
     display: flex;
     justify-content: space-between; }
-    .nav-content .logo {
-      background-color: lightgreen; }
     .nav-content ul {
       display: flex; }
       .nav-content ul li {
@@ -60,7 +103,7 @@ ul {
           border-bottom: 0.45rem transparent solid;
           transition: border-color 0.5s; }
           .nav-content ul li .nav-link:hover {
-            border-color: navy; }
+            border-color: #e0bf24; }
 
 @media (max-width: 37.5em) {
   .nav-content {
@@ -69,7 +112,7 @@ ul {
     display: inline-block;
     font-size: 4rem;
     padding: 1.3rem;
-    color: red;
+    color: #222;
     position: fixed;
     right: 0;
     top: 0; } }
@@ -79,14 +122,13 @@ ul {
   width: 20rem;
   max-width: 70%;
   height: 100%;
-  background-color: red;
+  background-color: #bd338e;
   right: 0;
   top: 0;
   z-index: 500;
   padding: 3rem 1.5rem;
   transition: transform 0.3s ease-out; }
   .side-drawer .logo {
-    background-color: pink;
     margin: 1.3rem; }
   .side-drawer ul {
     display: block; }
@@ -95,11 +137,10 @@ ul {
       .side-drawer ul li .nav-link {
         text-decoration: none;
         color: #222;
-        background-color: white;
         border-bottom: 0.45rem transparent solid;
         transition: border-color 0.5s; }
         .side-drawer ul li .nav-link:hover {
-          border-color: navy; }
+          font-weight: bold; }
 
 .backdrop {
   width: 100%;
@@ -121,6 +162,25 @@ ul {
 .close-drawer {
   transform: translateX(100%); }
 
-.Home-class {
-  font-size: 3rem;
-  background-color: lawngreen; }
+.hero {
+  background-color: lawngreen;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .hero-content {
+    text-align: center; }
+
+.about {
+  text-align: center; }
+
+.skills {
+  background-color: #e0bf24;
+  text-align: center; }
+  .skills-card {
+    padding: 5rem;
+    background-color: rgba(255, 255, 255, 0.8); }
+  .skills-icon {
+    background: linear-gradient(180deg, #bd338e 0%, #689751 100%);
+    font-size: 3rem;
+    margin-bottom: 3rem; }

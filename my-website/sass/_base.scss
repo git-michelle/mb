@@ -1,5 +1,18 @@
+// SPACING VARIABLES
+$pad-lg: 12rem;
+$pad-md: 5rem;
+$pad-sm: 3rem;
+$pad-xs: 1.5rem;
+
+$marg-lg: 12rem;
+$marg-md: 5rem;
+$marg-sm: 3rem;
+$marg-xs: 1.5rem;
+
 // COLOR VARIABLES
-$color-primary: #bada55;
+$color-primary: #689751;
+$color-secondary: #e0bf24;
+$color-tertiary: #bd338e;
 
 $color-light: #fff;
 $text-dark: #222;
@@ -17,19 +30,35 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 p,
 li {
   font-family: "Hind", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
 }
 
 .body-text {
   font-size: 1.6rem;
 }
 
-// SPACING VARIABLES
+h1 {
+  font-size: 9rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.section-heading {
+  margin-bottom: $marg-sm;
+}
 
 // RESPONSIVE BREAKPOINTS
 $bp-lg: 80em; //1280px
@@ -37,10 +66,47 @@ $bp-md: 60em; //960px
 $bp-sm: 37.5em; //600px
 
 // CONTAINERS
+$page-content-width: 96rem;
+
+.container-centered-content {
+  max-width: $page-content-width;
+  margin: 0 auto;
+  padding: $pad-lg;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.full-width {
+  max-width: 100%;
+}
 
 // CONTAINER SHADOW
 .box-shadow {
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+// BUTTONS
+.btn-outline {
+  display: inline-block;
+  text-decoration: none;
+  color: $text-dark;
+  width: 21rem;
+  min-height: 5rem;
+  padding: 1rem 2rem;
+  border: 0.3rem solid $color-primary;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  overflow: hidden;
+  margin-top: $marg-sm;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-primary;
+  }
 }
 
 // BASICS
@@ -59,7 +125,7 @@ html {
 }
 
 body {
-  background-color: lightblue;
+  background-color: $color-light;
 }
 
 ul {

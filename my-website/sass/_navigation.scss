@@ -1,11 +1,13 @@
 .nav {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
   width: 100%;
   height: 7rem;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 50;
 
   &-content {
-    max-width: 96rem;
+    max-width: $page-content-width;
     margin: auto;
     padding: 1rem 2rem;
     overflow: hidden;
@@ -13,7 +15,7 @@
     justify-content: space-between;
 
     .logo {
-      background-color: lightgreen;
+      // background-color: lightgreen;
     }
 
     ul {
@@ -28,7 +30,7 @@
           border-bottom: 0.45rem transparent solid; //so on hover it changes color without pushing stuff down
           transition: border-color 0.5s;
           &:hover {
-            border-color: navy;
+            border-color: $color-secondary;
           }
         }
       }
@@ -45,7 +47,7 @@
     display: inline-block;
     font-size: 4rem;
     padding: 1.3rem;
-    color: red;
+    color: $text-dark;
     position: fixed;
     right: 0;
     top: 0;
@@ -58,14 +60,13 @@
   width: 20rem;
   max-width: 70%;
   height: 100%;
-  background-color: red;
+  background-color: $color-tertiary;
   right: 0;
   top: 0;
   z-index: 500;
   padding: 3rem 1.5rem;
   transition: transform 0.3s ease-out;
   .logo {
-    background-color: pink;
     margin: 1.3rem;
   }
 
@@ -78,11 +79,10 @@
       .nav-link {
         text-decoration: none;
         color: $text-dark;
-        background-color: white;
         border-bottom: 0.45rem transparent solid;
         transition: border-color 0.5s;
         &:hover {
-          border-color: navy;
+          font-weight: bold;
         }
       }
     }

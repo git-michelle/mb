@@ -7,7 +7,7 @@ const Toolbar = (props) => {
   return (
     <nav className="nav box-shadow">
       <div className="nav-content">
-        <Link to="/more">
+        <Link to="/">
           <img
             className="logo"
             src="/images/logo-m.png"
