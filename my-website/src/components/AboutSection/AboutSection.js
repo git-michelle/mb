@@ -14,7 +14,7 @@ const AboutSection = () => {
           psychology and computer science, I am also passionate about research
           and user experience.
           <br />
-          <Link to="/more" class="btn-outline">
+          <Link to="/more" class="btn btn-outline">
             Learn More
           </Link>
           <br />

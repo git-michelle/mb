@@ -15,7 +15,9 @@ $color-secondary: #e0bf24;
 $color-tertiary: #bd338e;
 
 $color-light: #fff;
-$text-dark: #222;
+$color-dark: #333;
+$color-light-gray: #eee;
+$text-dark: #333;
 $text-light: #fff;
 
 // FONT VARIABLES
@@ -58,6 +60,11 @@ h3 {
 
 .section-heading {
   margin-bottom: $marg-sm;
+  text-align: center;
+}
+
+.card-heading {
+  margin-bottom: $marg-xs;
 }
 
 // RESPONSIVE BREAKPOINTS
@@ -77,6 +84,9 @@ $page-content-width: 96rem;
 .container-flex {
   display: flex;
   justify-content: center;
+  @media (max-width: $bp-sm) {
+    flex-direction: column;
+  }
 }
 
 .full-width {
@@ -89,23 +99,47 @@ $page-content-width: 96rem;
 }
 
 // BUTTONS
-.btn-outline {
-  display: inline-block;
+%btn-shared {
+  display: inline-flex;
+  justify-content: center;
   text-decoration: none;
-  color: $text-dark;
-  width: 21rem;
-  min-height: 5rem;
   padding: 1rem 2rem;
-  border: 0.3rem solid $color-primary;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
   overflow: hidden;
   margin-top: $marg-sm;
-  transition: all 0.3s;
+  transition: all 1s;
+}
 
-  &:hover {
-    background-color: $color-primary;
+.btn {
+  &-outline {
+    @extend %btn-shared;
+
+    width: 21rem;
+    min-height: 5rem;
+    color: $color-primary;
+    border: 0.1rem solid $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $text-dark;
+    }
+  }
+
+  &-light {
+    @extend %btn-shared;
+
+    background-color: $color-light;
+    border: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &-icon {
+    position: relative;
   }
 }
 

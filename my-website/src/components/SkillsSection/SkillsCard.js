@@ -1,14 +1,23 @@
 import React from "react";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaServer, FaPencilRuler } from "react-icons/fa";
 
-const SkillsCard = () => {
+const SkillsCard = (props) => {
   return (
     <div className="skills-card">
-      <FaCode className="skills-icon" />
-      <h3>Front-End</h3>
-      <p>
-        HTML <br /> CSS3 | SASS <br /> JavaScript <br /> React
-      </p>
+      {props.id === 0 ? (
+        <FaCode className="skills-icon" />
+      ) : props.id === 1 ? (
+        <FaServer className="skills-icon" />
+      ) : props.id === 2 ? (
+        <FaPencilRuler className="skills-icon" />
+      ) : null}
+
+      <h3 className="card-heading">{props.cardTitle}</h3>
+      <ul>
+        {props.skillsList.map((skill) => (
+          <li key={props.id}>{skill}</li>
+        ))}
+      </ul>
     </div>
   );
 };
