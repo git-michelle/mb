@@ -84,6 +84,7 @@ $page-content-width: 96rem;
 .container-flex {
   display: flex;
   justify-content: center;
+  max-width: $page-content-width;
   @media (max-width: $bp-sm) {
     flex-direction: column;
   }
@@ -140,6 +141,15 @@ $page-content-width: 96rem;
 
   &-icon {
     position: relative;
+    &-1 {
+      color: $color-tertiary;
+    }
+    &-2 {
+      color: $color-primary;
+    }
+    &-3 {
+      color: $color-secondary;
+    }
   }
 }
 

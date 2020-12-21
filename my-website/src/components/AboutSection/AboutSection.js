@@ -5,7 +5,7 @@ const AboutSection = () => {
   return (
     <section className="about fullwidth" id="about">
       <div className="about-content container-centered-content">
-        <h2 class="section-heading">About</h2>
+        <h2 className="section-heading">About</h2>
         <p>
           I'm a front-end developer with full-stack experience, based in
           beautiful BC.
@@ -14,7 +14,7 @@ const AboutSection = () => {
           psychology and computer science, I am also passionate about research
           and user experience.
           <br />
-          <Link to="/more" class="btn btn-outline">
+          <Link to="/more" className="btn btn-outline">
             Learn More
           </Link>
           <br />
