@@ -186,3 +186,75 @@
     padding: $pad-md $pad-sm;
   }
 }
+
+// CONTACT SECTION
+
+.contact {
+  &-container {
+    display: flex;
+    width: 100%;
+    @media (max-width: $bp-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &-img-area {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    @media (max-width: $bp-sm) {
+      width: 100%;
+      margin-bottom: $marg-sm;
+    }
+
+    img {
+      margin: 0 auto;
+      padding-bottom: $pad-md;
+      width: 80%;
+    }
+  }
+
+  &-form-area {
+    width: 50%;
+    @media (max-width: $bp-sm) {
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 80%;
+      font-size: 1.6rem;
+      @media (max-width: $bp-sm) {
+        width: 100%;
+      }
+
+      .input-style {
+        border: 0.1rem solid $color-light-gray;
+        padding: 0.7rem;
+        font-family: "Hind", sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        color: $text-dark;
+        &:focus {
+          outline: none;
+          border: 0.1rem solid $color-primary;
+        }
+      }
+
+      input {
+        margin-bottom: $marg-xs;
+      }
+
+      button {
+        align-self: flex-end;
+        margin-top: $marg-xs;
+        min-height: 3rem;
+        width: 14rem;
+      }
+    }
+  }
+}

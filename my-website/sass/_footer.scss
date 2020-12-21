@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  margin: $marg-sm 0;
+  align-items: center;
+  justify-content: center;
+
+  .links-container {
+    margin: 0 $marg-md;
+
+    .footer-icon {
+      font-size: 2.5rem;
+      margin: 0 $marg-xs;
+      color: $text-dark;
+      &:hover {
+        color: $color-tertiary;
+      }
+    }
+  }
+}

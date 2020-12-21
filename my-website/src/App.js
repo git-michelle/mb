@@ -4,6 +4,7 @@ import Toolbar from "./Components/Navigation/Toolbar";
 import SideDrawer from "./Components/Navigation/SideDrawer";
 import HomePage from "./Screens/HomePage";
 import MoreInfoPage from "./Screens/MoreInfoPage";
+import Footer from "./Components/Footer";
 import "./App.scss";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/more" component={MoreInfoPage} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

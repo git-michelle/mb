@@ -10,7 +10,7 @@ $marg-sm: 3rem;
 $marg-xs: 1.5rem;
 
 // COLOR VARIABLES
-$color-primary: #689751;
+$color-primary: #77cb5c;
 $color-secondary: #e0bf24;
 $color-tertiary: #bd338e;
 
@@ -78,7 +78,7 @@ $page-content-width: 96rem;
 .container-centered-content {
   max-width: $page-content-width;
   margin: 0 auto;
-  padding: $pad-lg;
+  padding: $pad-lg $pad-xs;
 }
 
 .container-flex {
@@ -111,6 +111,9 @@ $page-content-width: 96rem;
   overflow: hidden;
   margin-top: $marg-sm;
   transition: all 1s;
+  &:focus {
+    outline: none;
+  }
 }
 
 .btn {
@@ -119,6 +122,7 @@ $page-content-width: 96rem;
 
     width: 21rem;
     min-height: 5rem;
+    background-color: transparent;
     color: $color-primary;
     border: 0.1rem solid $color-primary;
 
