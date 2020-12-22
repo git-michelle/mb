@@ -56,9 +56,10 @@ h3 {
 .btn-outline {
   display: inline-flex;
   justify-content: center;
+  align-items: center;
   text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  padding: 0.8rem 1.7rem;
+  border-radius: 0.2rem;
   cursor: pointer;
   font-size: 2rem;
   overflow: hidden;
@@ -76,6 +77,13 @@ h3 {
   .btn-outline:hover {
     background-color: #77cb5c;
     color: #333; }
+
+.section-divider {
+  max-width: 96rem;
+  background-color: #77cb5c;
+  border: none;
+  margin: 0 auto;
+  height: 0.1rem; }
 
 *,
 *::before,
@@ -229,7 +237,7 @@ ul {
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(51, 51, 51, 0.2); }
     .card-side--front {
@@ -262,13 +270,14 @@ ul {
     padding: 3rem; }
   .card-project-heading {
     margin-bottom: 1.5rem;
-    text-shadow: 0.05rem 0.08rem 0.1rem #111; }
+    color: #333;
+    padding: 0.3rem; }
     .card-project-heading-1 {
-      color: #6d1d52; }
+      background-color: rgba(189, 51, 142, 0.7); }
     .card-project-heading-2 {
-      color: #47922f; }
+      background-color: rgba(119, 203, 92, 0.7); }
     .card-project-heading-3 {
-      color: #e0bf24; }
+      color: rgba(224, 191, 36, 0.7); }
   .card-details ul {
     width: 70%;
     margin: 5rem auto; }
@@ -347,6 +356,52 @@ ul {
   right: 1.5rem;
   transition: transform 0.5s ease;
   animation: alert-in-right 0.5s; }
+
+.volunteer-info,
+.education-info {
+  width: 60%; }
+  @media (max-width: 37.5em) {
+    .volunteer-info,
+    .education-info {
+      width: 100%; } }
+  .volunteer-info h3,
+  .education-info h3 {
+    margin-top: 1.5rem; }
+  .volunteer-info .date,
+  .education-info .date {
+    color: #bd338e; }
+  .volunteer-info ul,
+  .education-info ul {
+    list-style-type: circle;
+    margin-left: 2rem; }
+    .volunteer-info ul li span,
+    .education-info ul li span {
+      position: relative;
+      left: -0.5rem; }
+
+.img-area {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .img-area img {
+    width: 80%; }
+  @media (max-width: 37.5em) {
+    .img-area {
+      width: 75%;
+      margin: 1.5rem auto; } }
+
+.flex-reverse {
+  flex-direction: row-reverse; }
+  @media (max-width: 37.5em) {
+    .flex-reverse {
+      flex-direction: column; } }
+  .flex-reverse .bold {
+    font-weight: bold; }
+  .flex-reverse .btn-outline {
+    margin-top: 1.5rem;
+    width: 50%;
+    font-size: 1.8rem; }
 
 .footer {
   display: flex;

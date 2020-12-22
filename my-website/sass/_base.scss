@@ -103,9 +103,10 @@ $page-content-width: 96rem;
 %btn-shared {
   display: inline-flex;
   justify-content: center;
+  align-items: center;
   text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
+  padding: 0.8rem 1.7rem;
+  border-radius: 0.2rem;
   cursor: pointer;
   font-size: 2rem;
   overflow: hidden;
@@ -131,6 +132,15 @@ $page-content-width: 96rem;
       color: $text-dark;
     }
   }
+}
+
+// SECTION DIVIDER
+.section-divider {
+  max-width: $page-content-width;
+  background-color: $color-primary;
+  border: none;
+  margin: 0 auto;
+  height: 0.1rem;
 }
 
 // BASICS
