@@ -131,30 +131,6 @@ $page-content-width: 96rem;
       color: $text-dark;
     }
   }
-
-  &-light {
-    @extend %btn-shared;
-
-    background-color: $color-light;
-    border: none;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  &-icon {
-    position: relative;
-    &-1 {
-      color: $color-tertiary;
-    }
-    &-2 {
-      color: $color-primary;
-    }
-    &-3 {
-      color: $color-secondary;
-    }
-  }
 }
 
 // BASICS

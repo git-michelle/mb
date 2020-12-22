@@ -10,19 +10,31 @@ const ProjectsSection = () => {
           <ProjectsCard
             id="1"
             projectName="OpenShelf"
+            description="A full-stack web app for people to share books within their community."
             techList={[
               "React | Material-UI",
               "Express | NodeJS",
               "MongoDB",
               "Google Books API",
+              "Collaborated with 2 devs",
+              "Daily standups",
             ]}
-            description="A responsive web app for people who want to share books within their community."
+            siteURL="https://openshelf.netlify.app/"
+            srcCode="https://github.com/chingu-voyages/v25-bears-team-06"
           />
           <ProjectsCard
             id="2"
             projectName="Gift Angels"
-            techList={["HTML", "CSS | SASS", "Vanilla JS"]}
             description="A responsive website for a Ugandan, non-profit organization."
+            techList={[
+              "HTML",
+              "CSS | SASS",
+              "Vanilla JS",
+              "Collaborated with UX team",
+              "Remote project, 4 time zones",
+            ]}
+            siteURL="http://www.giftangelsfoundation.org/"
+            srcCode="https://github.com/michellecan/ga-final"
           />
         </div>
       </div>
