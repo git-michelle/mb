@@ -226,6 +226,8 @@
       width: 100%;
     }
 
+    position: relative; //to position alert relative to it
+
     form {
       display: flex;
       flex-direction: column;
@@ -264,13 +266,47 @@
 }
 
 // alert
-.alert-container {
-  position: fixed;
+
+.floating-alerts .floating-alert:last-of-type {
+  display: block;
 }
 
-.bottom-right {
-  bottom: 1.5rem;
-  right: 1.5rem;
-  transition: transform 0.5s ease;
-  animation: alert-in-right 0.5s;
+.alert-success {
+  background-color: #00cc00;
+}
+
+.alert-warning {
+  background-color: #ff0f0f;
+}
+
+.floating-alert {
+  display: none;
+  position: absolute;
+  z-index: 600;
+  bottom: -5rem;
+  right: 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: $text-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatingAlert ease-in-out 4s forwards;
+  // forwards to keep it hidden after
+}
+
+@keyframes floatingAlert {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.2);
+  }
 }

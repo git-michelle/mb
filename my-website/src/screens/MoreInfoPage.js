@@ -37,7 +37,10 @@ const MoreInfoPage = () => {
             </ul>
           </div>
           <div className="img-area">
-            <img src="/images/volunteer-img.svg" alt="" />
+            <img
+              src="/images/volunteer-img.svg"
+              alt="Laptop displaying group call and design board"
+            />
           </div>
         </div>
       </section>
@@ -52,7 +55,7 @@ const MoreInfoPage = () => {
             <p className="date">2016-2019</p>
             <p>
               <span className="bold">Thesis:</span> Investigating Decisions and
-              Situational Perception in Uncertain Automated Driving Conditions
+              Situational Perception in Uncertain, Automated Driving Conditions
             </p>
             <button className="btn-outline">View Course Work & Projects</button>
             <h3>BSocSci Honours in Psychology</h3>
@@ -61,7 +64,10 @@ const MoreInfoPage = () => {
             <p>University of Johannesburg</p>
           </div>
           <div className="img-area">
-            <img src="/images/edu-img.svg" alt="" />
+            <img
+              src="/images/edu-img.svg"
+              alt="Graduation cap and scroll on a book"
+            />
           </div>
         </div>
       </section>

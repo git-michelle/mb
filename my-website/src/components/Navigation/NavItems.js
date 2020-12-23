@@ -1,24 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const NavItems = () => {
   return (
     <div>
       <ul>
         <li>
-          <Link to="#about-section" className="nav-link">
+          <a href="/#about" className="nav-link">
             About
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="#projects-section" className="nav-link">
+          <a href="#projects" className="nav-link">
             Projects
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="#contact-section" className="nav-link">
+          <a href="#contact" className="nav-link">
             Contact
-          </Link>
+          </a>
         </li>
       </ul>
     </div>

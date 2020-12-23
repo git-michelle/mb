@@ -2,7 +2,7 @@
 .volunteer-info,
 .education-info {
   width: 60%;
-  //   background-color: violet;
+  padding: 0 $pad-xs;
   @media (max-width: $bp-sm) {
     width: 100%;
   }
@@ -28,7 +28,6 @@
 
 .img-area {
   width: 40%;
-  //   background-color: yellowgreen;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +57,7 @@
 
   .btn-outline {
     margin-top: $marg-xs;
-    width: 50%;
+    width: 60%;
     font-size: 1.8rem;
   }
 }

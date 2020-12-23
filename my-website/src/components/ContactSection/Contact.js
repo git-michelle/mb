@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import Alert from "./Alert";
-import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 
 const Contact = () => {
+  // Alert msg
+  const [alertMessages, setAlertMessages] = useState([]);
+  const addAlertMessage = (msg) => {
+    setAlertMessages((prev) => prev.concat(msg));
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -22,29 +27,9 @@ const Contact = () => {
           console.log(error.text);
         }
       );
-
+    addAlertMessage("Message sent successfully");
     e.target.reset();
   };
-
-  const check = <FaCheckCircle />;
-  const exclamation = <FaExclamationCircle />;
-
-  const testList = [
-    {
-      id: 1,
-      title: "Success",
-      description: "This is a success toast component",
-      backgroundColor: "#5cb85c",
-      icon: check,
-    },
-    {
-      id: 2,
-      title: "Danger",
-      description: "This is an error toast component",
-      backgroundColor: "#d9534f",
-      icon: exclamation,
-    },
-  ];
 
   return (
     <section className="contact fullwidth" id="contact">
@@ -82,7 +67,7 @@ const Contact = () => {
               Send
             </button>
           </form>
-          <Alert alertList={testList} position="bottom-right" />
+          <Alert messages={alertMessages} />
         </div>
       </div>
     </section>
