@@ -127,7 +127,7 @@ ul {
           color: #333;
           border-bottom: 0.45rem transparent solid;
           transition: border-color 0.5s; }
-          .nav-content ul li .nav-link:hover {
+          .nav-content ul li .nav-link:hover, .nav-content ul li .nav-link-active {
             border-color: #e0bf24; }
 
 @media (max-width: 37.5em) {

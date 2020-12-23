@@ -1,23 +1,24 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 const NavItems = () => {
   return (
     <div>
       <ul>
         <li>
-          <a href="/#about" className="nav-link">
+          <HashLink smooth to="/#about" className="nav-link">
             About
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a href="#projects" className="nav-link">
+          <HashLink smooth to="/#projects" className="nav-link">
             Projects
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a href="#contact" className="nav-link">
+          <HashLink smooth to="/#contact" className="nav-link">
             Contact
-          </a>
+          </HashLink>
         </li>
       </ul>
     </div>
