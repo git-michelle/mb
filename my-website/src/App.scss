@@ -433,6 +433,52 @@ ul {
     width: 60%;
     font-size: 1.8rem; }
 
+.carousel {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto; }
+  .carousel-close {
+    display: none; }
+  .carousel-open {
+    display: contents; }
+  .carousel-section-top {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .carousel-img {
+    width: 100%;
+    height: auto; }
+  .carousel-section-bottom {
+    background-color: salmon;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between; }
+    .carousel-section-bottom-left {
+      background-color: rebeccapurple;
+      display: flex;
+      flex-direction: column; }
+      .carousel-section-bottom-left .item-count {
+        font-size: 1.3rem; }
+    .carousel-section-bottom .close-icon {
+      font-size: 3rem;
+      color: #333; }
+  .carousel-chevron {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 5rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none; }
+    .carousel-chevron-left {
+      justify-self: flex-start; }
+    .carousel-chevron-right {
+      justify-self: flex-end;
+      background-color: seagreen; }
+
 .footer {
   display: flex;
   margin: 3rem 0;
