@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import NavItems from "./NavItems";
-import Backdrop from "./Backdrop";
+import Backdrop from "../Backdrop";
 
 const SideDrawer = (props) => {
-  let attachedClasses = ["side-drawer", "close-drawer", "open-drawer"];
+  let attachedClasses = ["side-drawer", "close-drawer"];
   if (props.open) {
     attachedClasses = ["side-drawer", "open-drawer"];
   }

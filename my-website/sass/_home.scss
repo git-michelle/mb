@@ -53,20 +53,23 @@
   perspective: 180rem;
   -moz-perspective: 180rem;
   position: relative;
-  height: 30rem; // must be same as __side height
-  margin: 0 $marg-xs;
-  min-width: 25rem;
+  height: 42rem; // must be same as __side height
+  margin: 0 $marg-sm;
+  min-width: 36rem;
+  @media (max-width: $bp-sm) {
+    margin: $marg-xs;
+  }
 
   &-side {
-    height: 30rem;
-    min-width: 22rem;
+    height: 42rem;
+    min-width: 36rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     overflow: hidden; // to stop img covering border radius
     box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.2);
 
@@ -76,12 +79,34 @@
 
     &--back {
       transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       &-1 {
         background-image: linear-gradient(
           to right bottom,
           $color-tertiary,
+          lighten($color-tertiary, 10%),
           darken($color-tertiary, 30%)
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary,
+          lighten($color-primary, 10%),
+          darken($color-primary, 30%)
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary,
+          lighten($color-secondary, 10%),
+          darken($color-secondary, 30%)
         );
       }
     }
@@ -99,69 +124,189 @@
   // img
   &-img {
     background-size: cover;
-    height: 40%;
+    height: 55%;
     background-blend-mode: screen;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-bottom: $color-light-gray 0.1rem solid;
 
     &-1 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          darken($color-tertiary, 30%)
-        ),
-        url("../src/Components/ProjectsSection/project1.JPG");
+      background-image: url("https://i.imgur.com/Pa2qh4e.gif");
     }
 
     &-2 {
-      background-image: url("../src/Components/ProjectsSection/project1.JPG");
+      background-image: url("https://i.imgur.com/8fQa2tk.gif");
     }
 
-    &-3 {
-      background-image: url("../src/Components/ProjectsSection/project1.JPG");
-    }
+    // &-3 {
+    //   background-image: url("!#");
+    // }
   }
   //heading
-  &-project-heading {
-    color: $text-light;
-    position: absolute;
-    text-align: right;
-    top: 25%;
-    right: 1rem;
-    width: 75%;
+  &-project-overview {
+    padding: $pad-sm;
   }
 
-  &-project-heading-span {
-    padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+  &-project-heading {
+    margin-bottom: $marg-xs;
+    color: $color-dark;
+    padding: 0.3rem;
 
     &-1 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-tertiary, 0.85),
-        rgba(darken($color-tertiary, 30%), 0.85)
-      );
+      background-color: rgba($color-tertiary, 0.7);
     }
-  }
-
-  //details
-  &-details {
-    ul {
-      width: 75%;
-      margin: 0 auto;
-
-      li {
-        padding-top: 0.5rem;
-        &:not(:last-child) {
-          border-bottom: 1px solid $color-light-gray;
-        }
-      }
+    &-2 {
+      background-color: rgba($color-primary, 0.7);
+    }
+    &-3 {
+      color: rgba($color-secondary, 0.7);
     }
   }
 
   // BACK STYLING
-  &-cta {
-    padding: $pad-md $pad-sm;
+  //details
+  &-details {
+    ul {
+      width: 70%;
+      margin: $marg-md auto;
+
+      li {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+
+  &-links {
+    margin-bottom: $marg-md;
+
+    &-icon {
+      font-size: 3.5rem;
+      margin: $marg-xs;
+      color: $color-dark;
+      transition: all 1s;
+
+      &:hover {
+        color: $color-light;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// CONTACT SECTION
+
+.contact {
+  &-container {
+    display: flex;
+    width: 100%;
+    @media (max-width: $bp-sm) {
+      flex-direction: column;
+    }
+  }
+
+  &-img-area {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    @media (max-width: $bp-sm) {
+      width: 100%;
+      margin-bottom: $marg-sm;
+    }
+
+    img {
+      margin: 0 auto;
+      padding-bottom: $pad-md;
+      width: 80%;
+    }
+  }
+
+  &-form-area {
+    width: 50%;
+    @media (max-width: $bp-sm) {
+      width: 100%;
+    }
+
+    position: relative; //to position alert relative to it
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 80%;
+      font-size: 1.6rem;
+      @media (max-width: $bp-sm) {
+        width: 100%;
+      }
+
+      .input-style {
+        border: 0.1rem solid $color-light-gray;
+        padding: 0.7rem;
+        font-family: "Hind", sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        color: $text-dark;
+        &:focus {
+          outline: none;
+          border: 0.1rem solid $color-primary;
+        }
+      }
+
+      input {
+        margin-bottom: $marg-xs;
+      }
+
+      button {
+        align-self: flex-end;
+        margin-top: $marg-xs;
+        min-height: 3rem;
+        width: 14rem;
+      }
+    }
+  }
+}
+
+// alert
+
+.floating-alerts .floating-alert:last-of-type {
+  display: block;
+}
+
+.alert-success {
+  background-color: #00cc00;
+}
+
+.alert-warning {
+  background-color: #ff0f0f;
+}
+
+.floating-alert {
+  display: none;
+  position: absolute;
+  z-index: 600;
+  bottom: -5rem;
+  right: 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  color: $text-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatingAlert ease-in-out 4s forwards;
+  // forwards to keep it hidden after
+}
+
+@keyframes floatingAlert {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.2);
   }
 }

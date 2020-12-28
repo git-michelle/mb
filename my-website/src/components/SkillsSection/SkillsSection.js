@@ -8,17 +8,14 @@ const SkillSection = () => {
         <h2 className="section-heading">Skills</h2>
         <div className="container-flex">
           <SkillsCard
-            id={0}
             cardTitle="Front-End"
             skillsList={["HTML", "CSS3 | SASS", "JavaScript", "React"]}
           />
           <SkillsCard
-            id={1}
             cardTitle="Back-End"
             skillsList={["NodeJS", "Express", "MongoDB", "MySQL"]}
           />
           <SkillsCard
-            id={2}
             cardTitle="Design"
             skillsList={["Figma", "Balsamiq", "Inkscape"]}
           />

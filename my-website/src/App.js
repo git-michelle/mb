@@ -4,7 +4,9 @@ import Toolbar from "./Components/Navigation/Toolbar";
 import SideDrawer from "./Components/Navigation/SideDrawer";
 import HomePage from "./Screens/HomePage";
 import MoreInfoPage from "./Screens/MoreInfoPage";
+import Footer from "./Components/Footer";
 import "./App.scss";
+import ScrollToTop from "./Components/Navigation/ScrollToTop";
 
 function App() {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
@@ -19,12 +21,14 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Toolbar drawerToggleClicked={handleDrawerToggle} />
       <SideDrawer open={showSideDrawer} closed={handleSideDrawerClose} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/more" component={MoreInfoPage} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

@@ -1,0 +1,63 @@
+// SHARED
+.volunteer-info,
+.education-info {
+  width: 60%;
+  padding: 0 $pad-xs;
+  @media (max-width: $bp-sm) {
+    width: 100%;
+  }
+
+  h3 {
+    margin-top: $marg-xs;
+  }
+
+  .date {
+    color: $color-tertiary;
+  }
+
+  ul {
+    list-style-type: circle;
+    margin-left: 2rem;
+
+    li span {
+      position: relative;
+      left: -0.5rem;
+    }
+  }
+}
+
+.img-area {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 80%;
+  }
+
+  @media (max-width: $bp-sm) {
+    width: 75%;
+    margin: $marg-md auto 0;
+  }
+}
+
+// VOLUNTEER SECTION
+
+// EDU SECTION
+.flex-reverse {
+  flex-direction: row-reverse;
+  @media (max-width: $bp-sm) {
+    flex-direction: column;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .btn-outline {
+    margin-top: $marg-xs;
+    width: 60%;
+    font-size: 1.8rem;
+  }
+}
