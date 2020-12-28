@@ -1,7 +1,9 @@
 import React, { Fragment, useState } from "react";
 import { FaChevronRight, FaChevronLeft, FaWindowClose } from "react-icons/fa";
 
-const Carousel = ({ displayItems }, props) => {
+const Carousel = (props) => {
+  const { displayItems, close } = props;
+
   const [current, setCurrent] = useState(0);
   const totalItems = displayItems.length - 1;
 
@@ -57,7 +59,9 @@ const Carousel = ({ displayItems }, props) => {
             </p>
           </div>
           <div className="carousel-info-right">
-            <FaWindowClose className="close-icon" onClick={props.closeBtn} />
+            <button type="button" onClick={close}>
+              <FaWindowClose className="close-icon" />
+            </button>
           </div>
         </div>
       </div>

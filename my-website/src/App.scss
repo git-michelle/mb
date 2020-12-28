@@ -102,6 +102,89 @@ body {
 ul {
   list-style: none; }
 
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(240, 240, 240, 0.8); }
+
+.modal {
+  position: fixed;
+  z-index: 500;
+  background-color: #fff;
+  width: 65%;
+  padding: 1.5rem;
+  left: 17.5%;
+  top: 10%;
+  transition: all 0.7s ease-out;
+  border-radius: 0.2rem; }
+  @media (max-width: 60em) {
+    .modal {
+      width: 90%;
+      left: 5%; } }
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto; }
+  .carousel-close {
+    display: none; }
+  .carousel-open {
+    display: contents; }
+  .carousel-section-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+  .carousel-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; }
+  .carousel-section-bottom {
+    background-color: transparent;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between; }
+    .carousel-section-bottom-left {
+      display: flex;
+      flex-direction: column; }
+      .carousel-section-bottom-left .item-count {
+        font-size: 1.3rem; }
+    .carousel-section-bottom button {
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      background-color: transparent; }
+      .carousel-section-bottom button:focus {
+        outline: none; }
+    .carousel-section-bottom .close-icon {
+      font-size: 3rem;
+      color: #bd338e;
+      transition: all 1s; }
+      .carousel-section-bottom .close-icon:hover {
+        transform: scale(1.1); }
+  .carousel-chevron {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 4rem;
+    padding: 0.7rem;
+    margin: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none; }
+    @media (max-width: 60em) {
+      .carousel-chevron {
+        margin: 0.5rem;
+        font-size: 3rem; } }
+    .carousel-chevron-left {
+      justify-self: flex-start; }
+    .carousel-chevron-right {
+      justify-self: flex-end; }
+
 .nav {
   background: transparent;
   width: 100%;
@@ -166,15 +249,6 @@ ul {
         transition: border-color 0.5s; }
         .side-drawer ul li .nav-link:hover {
           font-weight: bold; }
-
-.backdrop {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.6); }
 
 @media (min-width: 37.5em) {
   .side-drawer,
@@ -419,7 +493,7 @@ ul {
   @media (max-width: 37.5em) {
     .img-area {
       width: 75%;
-      margin: 1.5rem auto; } }
+      margin: 5rem auto 0; } }
 
 .flex-reverse {
   flex-direction: row-reverse; }
@@ -432,52 +506,6 @@ ul {
     margin-top: 1.5rem;
     width: 60%;
     font-size: 1.8rem; }
-
-.carousel {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: auto; }
-  .carousel-close {
-    display: none; }
-  .carousel-open {
-    display: contents; }
-  .carousel-section-top {
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .carousel-img {
-    width: 100%;
-    height: auto; }
-  .carousel-section-bottom {
-    background-color: salmon;
-    display: flex;
-    padding: 1rem;
-    justify-content: space-between; }
-    .carousel-section-bottom-left {
-      background-color: rebeccapurple;
-      display: flex;
-      flex-direction: column; }
-      .carousel-section-bottom-left .item-count {
-        font-size: 1.3rem; }
-    .carousel-section-bottom .close-icon {
-      font-size: 3rem;
-      color: #333; }
-  .carousel-chevron {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 5rem;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-    user-select: none; }
-    .carousel-chevron-left {
-      justify-self: flex-start; }
-    .carousel-chevron-right {
-      justify-self: flex-end;
-      background-color: seagreen; }
 
 .footer {
   display: flex;

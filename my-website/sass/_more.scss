@@ -38,7 +38,7 @@
 
   @media (max-width: $bp-sm) {
     width: 75%;
-    margin: $marg-xs auto;
+    margin: $marg-md auto 0;
   }
 }
 
@@ -59,74 +59,5 @@
     margin-top: $marg-xs;
     width: 60%;
     font-size: 1.8rem;
-  }
-}
-
-// CAROUSEL
-.carousel {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: auto;
-
-  &-close {
-    display: none;
-  }
-
-  &-open {
-    display: contents;
-  }
-
-  &-section-top {
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &-img {
-    width: 100%;
-    height: auto;
-  }
-
-  &-section-bottom {
-    background-color: salmon;
-    display: flex;
-    padding: 1rem;
-    justify-content: space-between;
-
-    &-left {
-      background-color: rebeccapurple;
-      display: flex;
-      flex-direction: column;
-      .item-count {
-        font-size: 1.3rem;
-      }
-    }
-
-    .close-icon {
-      font-size: 3rem;
-      color: $text-dark;
-    }
-  }
-
-  &-chevron {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: $text-light;
-    font-size: 5rem;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-    user-select: none;
-
-    &-left {
-      justify-self: flex-start;
-    }
-
-    &-right {
-      justify-self: flex-end;
-      background-color: seagreen;
-    }
   }
 }

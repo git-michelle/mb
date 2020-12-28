@@ -1,0 +1,114 @@
+// BACKDROP
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+// MODAL
+.modal {
+  position: fixed;
+  z-index: 500;
+  background-color: $color-light;
+  width: 65%;
+  padding: $pad-xs;
+  left: 17.5%;
+  top: 10%;
+  transition: all 0.7s ease-out;
+  border-radius: 0.2rem;
+
+  @media (max-width: $bp-md) {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+// CAROUSEL
+.carousel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+
+  &-close {
+    display: none;
+  }
+
+  &-open {
+    display: contents;
+  }
+
+  &-section-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &-section-bottom {
+    background-color: transparent;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      .item-count {
+        font-size: 1.3rem;
+      }
+    }
+
+    button {
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    .close-icon {
+      font-size: 3rem;
+      color: $color-tertiary;
+      transition: all 1s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &-chevron {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: $text-light;
+    font-size: 4rem;
+    padding: 0.7rem;
+    margin: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    @media (max-width: $bp-md) {
+      margin: 0.5rem;
+      font-size: 3rem;
+    }
+
+    &-left {
+      justify-self: flex-start;
+    }
+
+    &-right {
+      justify-self: flex-end;
+    }
+  }
+}

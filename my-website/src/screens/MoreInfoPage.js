@@ -1,24 +1,29 @@
 import React, { Fragment, useState } from "react";
 import Carousel from "../Components/Carousel/Carousel";
 import { ImageData } from "../Components/Carousel/ImageData";
+import Modal from "../Components/Modal";
 
 const MoreInfoPage = () => {
   const [showCarousel, setShowCarousel] = useState(false);
+
   const handleButtonClick = () => {
     setShowCarousel(!showCarousel);
-    return (
-      <div className="wtf">
-        <h2>wtf</h2>
-      </div>
-    );
   };
 
-  const handleCloseBtn = () => {
+  const backdropClicked = () => {
+    setShowCarousel(!showCarousel);
+  };
+
+  let handleCloseBtn = () => {
+    console.log("pressed close icon");
     setShowCarousel(false);
   };
 
   return (
     <Fragment>
+      <Modal show={showCarousel} closeModal={backdropClicked}>
+        <Carousel displayItems={ImageData} close={handleCloseBtn} />
+      </Modal>
       <div className="more-info fullwidth" id="more-info">
         <section className="container-centered-content ">
           <h2 className="section-heading">UX Volunteer Projects</h2>
@@ -68,8 +73,8 @@ const MoreInfoPage = () => {
           <h2 className="section-heading">Education</h2>
           <div className="container-flex flex-reverse">
             <div className="education-info">
-              <h3>Masters in Cognitive Systems</h3>
-              <p>Ulm University</p>
+              <h3>Master's in Cognitive Systems</h3>
+              <p>Ulm University, Germany</p>
               <p className="date">2016-2019</p>
               <p>
                 <span className="bold">Thesis:</span> Investigating Decisions
@@ -80,9 +85,9 @@ const MoreInfoPage = () => {
                 View Course Work & Projects
               </button>
               <h3>BSocSci Honours in Psychology</h3>
-              <p>University of Pretoria</p>
+              <p>University of Pretoria, South Africa</p>
               <h3>Bachelors in Psychology</h3>
-              <p>University of Johannesburg</p>
+              <p>University of Johannesburg, South Africa</p>
             </div>
             <div className="img-area">
               <img
@@ -92,11 +97,6 @@ const MoreInfoPage = () => {
             </div>
           </div>
         </section>
-        {showCarousel ? (
-          <Carousel displayItems={ImageData} closeBtn={handleCloseBtn} />
-        ) : (
-          <p>NOOOOOOOOOO</p>
-        )}
       </div>
     </Fragment>
   );
