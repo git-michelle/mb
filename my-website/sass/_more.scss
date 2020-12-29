@@ -3,7 +3,7 @@
 .education-info {
   width: 60%;
   padding: 0 $pad-xs;
-  @media (max-width: $bp-sm) {
+  @media (max-width: $bp-md) {
     width: 100%;
   }
 
@@ -36,7 +36,7 @@
     width: 80%;
   }
 
-  @media (max-width: $bp-sm) {
+  @media (max-width: $bp-md) {
     width: 75%;
     margin: $marg-md auto 0;
   }
@@ -47,7 +47,7 @@
 // EDU SECTION
 .flex-reverse {
   flex-direction: row-reverse;
-  @media (max-width: $bp-sm) {
+  @media (max-width: $bp-md) {
     flex-direction: column;
   }
 

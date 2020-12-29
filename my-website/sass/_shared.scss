@@ -21,6 +21,16 @@
   transition: all 0.7s ease-out;
   border-radius: 0.2rem;
 
+  &-hide {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+
+  &-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   @media (max-width: $bp-md) {
     width: 90%;
     left: 5%;
@@ -81,10 +91,11 @@
     }
     .close-icon {
       font-size: 3rem;
-      color: $color-tertiary;
+      color: $text-dark;
       transition: all 1s;
       &:hover {
         transform: scale(1.1);
+        color: red;
       }
     }
   }

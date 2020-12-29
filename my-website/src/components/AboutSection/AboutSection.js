@@ -8,7 +8,7 @@ const AboutSection = () => {
         <h2 className="section-heading">About</h2>
         <p>
           I'm a front-end developer with full-stack experience, based in
-          beautiful BC.
+          beautiful British Columbia.
           <br />
           With a master's degree in cognitive systems, the intersection between
           psychology and computer science, I am also passionate about research

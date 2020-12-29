@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
@@ -7,12 +6,20 @@ const Footer = () => {
     <footer className="footer">
       <p>&copy; {new Date().getFullYear()} Michelle B</p>
       <div className="links-container">
-        <Link to="">
+        <a
+          href="https://github.com/michellecan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaGithub className="footer-icon" />
-        </Link>
-        <Link to="">
+        </a>
+        <a
+          href="https://www.linkedin.com/in/michelle-bence/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaLinkedin className="footer-icon" />
-        </Link>
+        </a>
       </div>
     </footer>
   );

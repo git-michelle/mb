@@ -13,14 +13,14 @@ const SideDrawer = (props) => {
     <Fragment>
       <Backdrop show={props.open} clicked={props.closed} />
       <div className={attachedClasses.join(" ")}>
-        <Link to="/">
+        <Link to="/" onClick={props.closed}>
           <img
             className="logo"
             src="/images/logo-m.png"
             alt="letter m in circle"
           />
         </Link>
-        <NavItems />
+        <NavItems sideDrawerState={props.closed} />
       </div>
     </Fragment>
   );

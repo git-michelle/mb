@@ -17,8 +17,13 @@ $color-tertiary: #bd338e;
 $color-light: #fff;
 $color-dark: #333;
 $color-light-gray: #eee;
-$text-dark: #333;
+$text-dark: #222;
 $text-light: #fff;
+
+// RESPONSIVE BREAKPOINTS
+$bp-lg: 80em; //1280px
+$bp-md: 60em; //960px
+$bp-sm: 37.5em; //600px
 
 // FONT VARIABLES
 
@@ -26,6 +31,7 @@ h1,
 h2,
 h3 {
   font-family: "Montserrat", sans-serif;
+  color: $text-dark;
 }
 
 h2,
@@ -33,6 +39,7 @@ h3,
 h4 {
   text-transform: uppercase;
   line-height: 1.2;
+  color: $text-dark;
 }
 
 p,
@@ -40,14 +47,19 @@ li {
   font-family: "Hind", sans-serif;
   font-size: 1.8rem;
   line-height: 1.6;
+  color: $text-dark;
 }
 
 .body-text {
   font-size: 1.6rem;
+  color: $text-dark;
 }
 
 h1 {
-  font-size: 9rem;
+  font-size: 8rem;
+  @media (max-width: $bp-sm) {
+    font-size: 6rem;
+  }
 }
 
 h2 {
@@ -67,11 +79,6 @@ h3 {
   margin-bottom: $marg-xs;
 }
 
-// RESPONSIVE BREAKPOINTS
-$bp-lg: 80em; //1280px
-$bp-md: 60em; //960px
-$bp-sm: 37.5em; //600px
-
 // CONTAINERS
 $page-content-width: 96rem;
 
@@ -85,7 +92,7 @@ $page-content-width: 96rem;
   display: flex;
   justify-content: center;
   max-width: $page-content-width;
-  @media (max-width: $bp-sm) {
+  @media (max-width: $bp-md) {
     flex-direction: column;
   }
 }
@@ -141,6 +148,10 @@ $page-content-width: 96rem;
   border: none;
   margin: 0 auto;
   height: 0.1rem;
+
+  @media (max-width: $bp-md) {
+    max-width: 80%;
+  }
 }
 
 // BASICS
@@ -156,6 +167,9 @@ $page-content-width: 96rem;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  @media only screen and (max-width: $bp-md) {
+    font-size: 55%;
+  }
 }
 
 body {
