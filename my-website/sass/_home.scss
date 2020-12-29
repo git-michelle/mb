@@ -1,6 +1,37 @@
 //HERO SECTION
+.flash-content {
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  z-index: 1000;
+  margin: auto;
+  animation-name: theFlash;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  position: absolute;
+}
+@keyframes theFlash {
+  0% {
+    transform: scale(0.5);
+    background-color: $color-primary;
+  }
+  50% {
+    transform: scale(8);
+    background-color: $color-secondary;
+  }
+  100% {
+    transform: scale(0.001);
+    display: none;
+    background-color: $color-primary;
+  }
+}
+
+.full-width-hero {
+  background-color: yellow;
+  background-image: url("../src/Components/HeroSection/white-paint.jpg");
+  background-size: cover;
+}
 .hero {
-  background-color: $color-light;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -11,6 +42,43 @@
 
     .description {
       opacity: 0.2;
+      margin: 1rem;
+      background-color: rgba($color-light, 0.6);
+
+      @media (max-width: $bp-md) {
+        display: block;
+      }
+
+      &-1 {
+        color: $color-primary;
+        animation-name: colorFocus;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+      }
+      &-2 {
+        color: $color-secondary;
+        animation-name: colorFocus;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 3s;
+      }
+      &-3 {
+        color: $color-tertiary;
+        animation-name: colorFocus;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 4.5s;
+      }
+
+      @keyframes colorFocus {
+        0% {
+          opacity: 0.2;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     }
   }
 }
