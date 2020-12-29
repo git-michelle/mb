@@ -1,6 +1,6 @@
 //HERO SECTION
 .hero {
-  background-color: lawngreen;
+  background-color: $color-light;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -8,6 +8,10 @@
 
   &-content {
     text-align: center;
+
+    .description {
+      opacity: 0.2;
+    }
   }
 }
 
@@ -31,8 +35,8 @@
       background-color: rgba(255, 255, 255, 1);
     }
 
-    @media (max-width: $bp-sm) {
-      margin: $marg-xs auto;
+    @media (max-width: $bp-md) {
+      margin: $marg-sm auto 0;
     }
   }
 
@@ -53,15 +57,15 @@
   perspective: 180rem;
   -moz-perspective: 180rem;
   position: relative;
-  height: 42rem; // must be same as __side height
+  height: 44rem; // must be same as __side height
   margin: 0 $marg-sm;
   min-width: 36rem;
-  @media (max-width: $bp-sm) {
+  @media (max-width: $bp-md) {
     margin: $marg-xs;
   }
 
   &-side {
-    height: 42rem;
+    height: 44rem;
     min-width: 36rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -157,7 +161,7 @@
       background-color: rgba($color-primary, 0.7);
     }
     &-3 {
-      color: rgba($color-secondary, 0.7);
+      background-color: rgba($color-secondary, 0.7);
     }
   }
 

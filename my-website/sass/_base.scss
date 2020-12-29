@@ -47,7 +47,7 @@ li {
 }
 
 h1 {
-  font-size: 9rem;
+  font-size: 8rem;
 }
 
 h2 {
@@ -85,7 +85,7 @@ $page-content-width: 96rem;
   display: flex;
   justify-content: center;
   max-width: $page-content-width;
-  @media (max-width: $bp-sm) {
+  @media (max-width: $bp-md) {
     flex-direction: column;
   }
 }
@@ -141,6 +141,10 @@ $page-content-width: 96rem;
   border: none;
   margin: 0 auto;
   height: 0.1rem;
+
+  @media (max-width: $bp-md) {
+    max-width: 80%;
+  }
 }
 
 // BASICS
@@ -156,6 +160,9 @@ $page-content-width: 96rem;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  @media only screen and (max-width: $bp-md) {
+    font-size: 55%;
+  }
 }
 
 body {

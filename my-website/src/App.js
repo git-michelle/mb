@@ -11,19 +11,15 @@ import ScrollToTop from "./Components/Navigation/ScrollToTop";
 function App() {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
 
-  const handleSideDrawerClose = () => {
-    setShowSideDrawer(!showSideDrawer);
-  };
-
-  const handleDrawerToggle = () => {
+  const toggleSideDrawer = () => {
     setShowSideDrawer(!showSideDrawer);
   };
 
   return (
     <Router>
       <ScrollToTop />
-      <Toolbar drawerToggleClicked={handleDrawerToggle} />
-      <SideDrawer open={showSideDrawer} closed={handleSideDrawerClose} />
+      <Toolbar drawerToggleClicked={toggleSideDrawer} />
+      <SideDrawer open={showSideDrawer} closed={toggleSideDrawer} />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/more" component={MoreInfoPage} />

@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
-import { FaChevronRight, FaChevronLeft, FaWindowClose } from "react-icons/fa";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { VscClose } from "react-icons/vsc";
 
 const Carousel = (props) => {
   const { displayItems, close } = props;
@@ -60,7 +61,7 @@ const Carousel = (props) => {
           </div>
           <div className="carousel-info-right">
             <button type="button" onClick={close}>
-              <FaWindowClose className="close-icon" />
+              <VscClose className="close-icon" />
             </button>
           </div>
         </div>
