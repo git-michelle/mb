@@ -22,7 +22,7 @@ const Toolbar = (props) => {
         <Link to="/">
           <img
             className="logo"
-            src="/images/logo-m.png"
+            src="/images/logo-tertiary.svg"
             alt="letter m in circle"
           />
         </Link>

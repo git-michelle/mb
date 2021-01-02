@@ -26,60 +26,59 @@
   }
 }
 
-.full-width-hero {
-  background-color: yellow;
-  background-image: url("../src/Components/HeroSection/white-paint.jpg");
-  background-size: cover;
-}
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 95vh;
+  background: $color-secondary;
+  position: relative;
 
-  &-content {
-    text-align: center;
+  &-sphere {
+    position: absolute;
+    top: -35rem;
+    right: -28rem;
+    width: 90%;
+    height: 120%;
+    background: radial-gradient(
+      lighten($color-primary, 22%),
+      lighten($color-primary, 17%) 20%,
+      darken($color-primary, 10%) 80%
+    );
+    border-radius: 50%;
+    transition: all 2s ease-in-out;
+    animation: bobble 5s infinite;
+  }
 
-    .description {
-      opacity: 0.2;
-      margin: 1rem;
-      background-color: rgba($color-light, 0.6);
+  &-text {
+    position: absolute;
+    padding-left: $pad-sm;
+    padding-top: $pad-lg;
+    line-height: 1.7;
 
-      @media (max-width: $bp-md) {
-        display: block;
-      }
-
-      &-1 {
-        color: $color-primary;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 1.5s;
-      }
-      &-2 {
-        color: $color-secondary;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 3s;
-      }
-      &-3 {
-        color: $color-tertiary;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 4.5s;
-      }
-
-      @keyframes colorFocus {
-        0% {
-          opacity: 0.2;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
+    &-name {
+      margin-bottom: $marg-xs;
+      color: $text-dark;
     }
+    &-desc {
+      font-weight: 400;
+      color: $text-dark;
+    }
+  }
+
+  &-wave {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    fill: $color-light;
+  }
+}
+
+@keyframes bobble {
+  0% {
+    transform: scale(1.001);
+    background-color: $color-primary;
+  }
+  50% {
+    transform: scale(1.01);
+    background-color: $color-secondary;
   }
 }
 

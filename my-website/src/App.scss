@@ -304,49 +304,44 @@ ul {
     display: none;
     background-color: #77cb5c; } }
 
-.full-width-hero {
-  background-color: yellow;
-  background-image: url("../src/Components/HeroSection/white-paint.jpg");
-  background-size: cover; }
-
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .hero-content {
-    text-align: center; }
-    .hero-content .description {
-      opacity: 0.2;
-      margin: 1rem;
-      background-color: rgba(255, 255, 255, 0.6); }
-      @media (max-width: 60em) {
-        .hero-content .description {
-          display: block; } }
-      .hero-content .description-1 {
-        color: #77cb5c;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 1.5s; }
-      .hero-content .description-2 {
-        color: #e0bf24;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 3s; }
-      .hero-content .description-3 {
-        color: #bd338e;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 4.5s; }
+  height: 95vh;
+  background: #e0bf24;
+  position: relative; }
+  .hero-sphere {
+    position: absolute;
+    top: -35rem;
+    right: -28rem;
+    width: 90%;
+    height: 120%;
+    background: radial-gradient(#bee6b1, #aee09e 20%, #5ab93b 80%);
+    border-radius: 50%;
+    transition: all 2s ease-in-out;
+    animation: bobble 5s infinite; }
+  .hero-text {
+    position: absolute;
+    padding-left: 3rem;
+    padding-top: 12rem;
+    line-height: 1.7; }
+    .hero-text-name {
+      margin-bottom: 1.5rem;
+      color: #222; }
+    .hero-text-desc {
+      font-weight: 400;
+      color: #222; }
+  .hero-wave {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    fill: #fff; }
 
-@keyframes colorFocus {
+@keyframes bobble {
   0% {
-    opacity: 0.2; }
-  100% {
-    opacity: 1; } }
+    transform: scale(1.001);
+    background-color: #77cb5c; }
+  50% {
+    transform: scale(1.01);
+    background-color: #e0bf24; } }
 
 .about {
   text-align: center; }
