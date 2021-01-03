@@ -6,7 +6,7 @@ import Backdrop from "../Backdrop";
 const SideDrawer = (props) => {
   let attachedClasses = ["side-drawer", "close-drawer"];
   if (props.open) {
-    attachedClasses = ["side-drawer", "open-drawer"];
+    attachedClasses = ["side-drawer", "box-shadow", "open-drawer"];
   }
 
   return (

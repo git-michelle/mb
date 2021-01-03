@@ -11,12 +11,18 @@
   }
 
   &-content {
-    max-width: $page-content-width;
+    max-width: 95%;
     margin: auto;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      margin-top: 0.5rem;
+      height: 6rem;
+    }
 
     ul {
       display: flex;
@@ -31,7 +37,7 @@
           transition: border-color 0.5s;
           &:hover,
           &-active {
-            border-color: $color-secondary;
+            border-color: $color-tertiary;
           }
         }
       }
@@ -61,7 +67,8 @@
   width: 20rem;
   max-width: 70%;
   height: 100%;
-  background-color: $color-tertiary;
+  background-color: $color-light;
+
   right: 0;
   top: 0;
   z-index: 500;
@@ -83,7 +90,7 @@
         border-bottom: 0.45rem transparent solid;
         transition: border-color 0.5s;
         &:hover {
-          font-weight: bold;
+          color: $color-tertiary;
         }
       }
     }

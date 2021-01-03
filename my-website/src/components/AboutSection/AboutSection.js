@@ -20,6 +20,9 @@ const AboutSection = () => {
           <br />
         </p>
       </div>
+      <svg className="about-wave" viewBox="0 0 1960 148">
+        <path d="M0,22.1V148h1960V79.7c-194.4,31.4-348,35.4-445.2,34.2C969,108.6,923.1,1,503.3,0C341.2-0.4,75.2,10.5,0,22.1z" />
+      </svg>
     </section>
   );
 };
