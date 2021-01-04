@@ -1,3 +1,8 @@
+// RESPONSIVE BREAKPOINTS
+$bp-lg: 80em; //1280px
+$bp-md: 60em; //960px
+$bp-sm: 37.5em; //600px
+
 // SPACING VARIABLES
 $pad-lg: 12rem;
 $pad-md: 5rem;
@@ -9,6 +14,11 @@ $marg-md: 5rem;
 $marg-sm: 3rem;
 $marg-xs: 1.5rem;
 
+@media (max-width: $bp-md) {
+  $pad-lg: 8rem;
+  $marg-lg: 8rem;
+}
+
 // COLOR VARIABLES
 $color-primary: #77cb5c;
 $color-secondary: #e0bf24;
@@ -19,11 +29,6 @@ $color-dark: #333;
 $color-light-gray: #eee;
 $text-dark: #222;
 $text-light: #fff;
-
-// RESPONSIVE BREAKPOINTS
-$bp-lg: 80em; //1280px
-$bp-md: 60em; //960px
-$bp-sm: 37.5em; //600px
 
 // FONT VARIABLES
 
@@ -58,7 +63,7 @@ li {
 h1 {
   font-size: 8rem;
   @media (max-width: $bp-sm) {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 

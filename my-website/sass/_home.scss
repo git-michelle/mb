@@ -1,107 +1,125 @@
 //HERO SECTION
-.flash-content {
-  width: 50rem;
-  height: 50rem;
-  border-radius: 50%;
-  z-index: 1000;
-  margin: auto;
-  animation-name: theFlash;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-  position: absolute;
+.hero {
+  height: 95vh;
+  background: $color-secondary;
+  position: relative;
+  overflow: hidden;
+
+  &-sphere {
+    position: absolute;
+    top: -35rem;
+    right: -35rem;
+    width: 100%;
+    height: 120%;
+    background: radial-gradient(
+      lighten($color-primary, 22%),
+      lighten($color-primary, 17%) 20%,
+      darken($color-primary, 10%) 80%
+    );
+    border-radius: 50%;
+    transition: all 2s ease-in-out;
+    animation: bobble 5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $bp-md) {
+      width: 100%;
+      height: 80%;
+      top: -15rem;
+      right: -15rem;
+    }
+    &-inner {
+      width: 75%;
+      height: 75%;
+      background: radial-gradient(
+        lighten($color-secondary, 25%),
+        lighten($color-secondary, 17%) 30%,
+        darken($color-secondary, 10%) 80%
+      );
+      border-radius: 50%;
+    }
+  }
+
+  &-text {
+    position: absolute;
+    padding-left: $pad-md;
+    padding-top: $pad-lg;
+
+    @media (max-width: $bp-md) {
+      padding-left: $pad-xs;
+    }
+
+    &-name {
+      margin-bottom: $marg-xs;
+      margin-top: $pad-lg;
+      color: $text-dark;
+      line-height: 1.7;
+      @media (max-width: $bp-md) {
+        line-height: 1.1;
+      }
+    }
+    &-desc {
+      font-weight: 400;
+      color: $text-dark;
+      line-height: 1.4;
+      @media (max-width: $bp-md) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &-wave {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    fill: $color-light;
+  }
 }
-@keyframes theFlash {
+
+@keyframes bobble {
   0% {
-    transform: scale(0.5);
+    transform: scale(1.001);
     background-color: $color-primary;
   }
   50% {
-    transform: scale(8);
+    transform: scale(1.01);
     background-color: $color-secondary;
-  }
-  100% {
-    transform: scale(0.001);
-    display: none;
-    background-color: $color-primary;
-  }
-}
-
-.full-width-hero {
-  background-color: yellow;
-  background-image: url("../src/Components/HeroSection/white-paint.jpg");
-  background-size: cover;
-}
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &-content {
-    text-align: center;
-
-    .description {
-      opacity: 0.2;
-      margin: 1rem;
-      background-color: rgba($color-light, 0.6);
-
-      @media (max-width: $bp-md) {
-        display: block;
-      }
-
-      &-1 {
-        color: $color-primary;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 1.5s;
-      }
-      &-2 {
-        color: $color-secondary;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 3s;
-      }
-      &-3 {
-        color: $color-tertiary;
-        animation-name: colorFocus;
-        animation-duration: 1.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 4.5s;
-      }
-
-      @keyframes colorFocus {
-        0% {
-          opacity: 0.2;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    }
   }
 }
 
 // ABOUT SECTION
 .about {
   text-align: center;
+  position: relative;
+
+  .btn {
+    margin-bottom: $marg-lg;
+
+    @media (max-width: $bp-md) {
+      margin-bottom: $marg-md;
+    }
+  }
+
+  &-wave {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    fill: $color-secondary;
+  }
 }
 
 // SKILLS SECTION
 .skills {
   background-color: $color-secondary;
   text-align: center;
+  position: relative;
 
   &-card {
     padding: $pad-md $pad-sm;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 0 $marg-xs;
+    background-color: $color-light;
+    margin: 0 $marg-xs $marg-lg;
     min-width: 22rem;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 1);
-    }
 
     @media (max-width: $bp-md) {
       margin: $marg-sm auto 0;
@@ -112,6 +130,13 @@
     font-size: 3rem;
     color: $color-secondary;
     margin-bottom: $marg-xs;
+  }
+
+  &-wave {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    fill: $color-light;
   }
 }
 
