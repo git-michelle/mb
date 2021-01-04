@@ -15,7 +15,6 @@ const MoreInfoPage = () => {
   };
 
   let handleCloseBtn = () => {
-    console.log("pressed close icon");
     setShowCarousel(false);
   };
 
