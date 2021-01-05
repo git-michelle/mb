@@ -159,10 +159,7 @@ ul {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 30rem; }
-    @media (max-width: 37.5em) {
-      .carousel-section-top {
-        min-height: 20rem; } }
+    min-height: calc(width/2); }
   .carousel-img {
     width: 100%;
     height: auto;

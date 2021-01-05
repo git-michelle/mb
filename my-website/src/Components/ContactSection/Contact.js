@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Alert from "./Alert";
 
 const Contact = () => {
   const [success, setSuccess] = useState(false);
@@ -8,6 +9,15 @@ const Contact = () => {
       setSuccess(true);
     }
   }, []);
+
+  // Alert msg
+  // const [alertMessages, setAlertMessages] = useState([]);
+  // const addAlertMessage = (msg) => {
+  //   setAlertMessages((prev) => prev.concat(msg));
+  // };
+  // addAlertMessage("Message sent successfully");
+  const alertMessages = "Message sent successfully";
+
   return (
     <section className="contact fullwidth" id="contact">
       <div className="contact-container container-centered-content">
@@ -20,7 +30,7 @@ const Contact = () => {
             name="contact"
             method="POST"
             data-netlify="true"
-            action="/?success=true"
+            action="/#contact?success=true"
           >
             <input type="hidden" name="form-name" value="contact" />
             <input
@@ -49,9 +59,7 @@ const Contact = () => {
             <button type="submit" className="btn-outline">
               Send
             </button>
-            {success && (
-              <p style={{ color: "green" }}>Thanks for your message! </p>
-            )}
+            {success && <Alert messages={alertMessages} />}
           </form>
         </div>
       </div>
