@@ -18,7 +18,6 @@ const Contact = () => {
   // addAlertMessage("Message sent successfully");
   // const alertMessages = "Message sent successfully";
 
-  const Contact = () => {
   // Alert msg
   const [alertMessages, setAlertMessages] = useState([]);
   const addAlertMessage = (msg) => {
