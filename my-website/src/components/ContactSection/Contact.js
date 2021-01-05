@@ -59,7 +59,12 @@ const Contact = () => {
             <button type="submit" className="btn-outline">
               Send
             </button>
-            {success && <Alert messages={alertMessages} />}
+            {/* {success && <Alert messages={alertMessages} />} */}
+            {success && (
+              <p className="alert-success floating-alert">
+                Message Sent Successfully
+              </p>
+            )}
           </form>
         </div>
       </div>
