@@ -159,10 +159,13 @@ ul {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 60%; }
+    min-height: 40rem; }
+    @media (max-width: 80em) {
+      .carousel-section-top {
+        min-height: 30rem; } }
     @media (max-width: 37.5em) {
       .carousel-section-top {
-        min-height: 35%; } }
+        min-height: 18rem; } }
   .carousel-img {
     width: 100%;
     height: auto;
@@ -195,18 +198,15 @@ ul {
         transform: scale(1.1);
         color: red; }
   .carousel-chevron {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-size: 4rem;
+    color: #222;
+    font-size: 5rem;
     padding: 0.7rem;
     margin: 1rem;
-    border-radius: 50%;
     cursor: pointer;
     user-select: none; }
     @media (max-width: 60em) {
       .carousel-chevron {
-        margin: 0.5rem;
-        font-size: 3rem; } }
+        margin: 0.2rem; } }
     .carousel-chevron-left {
       justify-self: flex-start; }
     .carousel-chevron-right {

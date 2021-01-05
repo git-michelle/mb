@@ -57,9 +57,12 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 60%;
+    min-height: 40rem;
+    @media (max-width: $bp-lg) {
+      min-height: 30rem;
+    }
     @media (max-width: $bp-sm) {
-      min-height: 35%;
+      min-height: 18rem;
     }
   }
 
@@ -111,17 +114,14 @@
   }
 
   &-chevron {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: $text-light;
-    font-size: 4rem;
+    color: $text-dark;
+    font-size: 5rem;
     padding: 0.7rem;
     margin: 1rem;
-    border-radius: 50%;
     cursor: pointer;
     user-select: none;
     @media (max-width: $bp-md) {
-      margin: 0.5rem;
-      font-size: 3rem;
+      margin: 0.2rem;
     }
 
     &-left {
