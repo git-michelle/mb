@@ -1,36 +1,6 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import Alert from "./Alert";
+import React from "react";
 
 const Contact = () => {
-  // Alert msg
-  const [alertMessages, setAlertMessages] = useState([]);
-  const addAlertMessage = (msg) => {
-    setAlertMessages((prev) => prev.concat(msg));
-  };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        e.target,
-        process.env.REACT_APP_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    addAlertMessage("Message sent successfully");
-    e.target.reset();
-  };
-
   return (
     <section className="contact fullwidth" id="contact">
       <div className="contact-container container-centered-content">
@@ -39,7 +9,7 @@ const Contact = () => {
           <img src="/images/mail-pic.svg" alt="woman writing beside envelope" />
         </div>
         <div className="contact-form-area">
-          <form onSubmit={sendEmail}>
+          <form name="contact" method="POST" data-netlify="true">
             <input
               type="text"
               placeholder="Name"
@@ -67,7 +37,6 @@ const Contact = () => {
               Send
             </button>
           </form>
-          <Alert messages={alertMessages} />
         </div>
       </div>
     </section>
