@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import Alert from "./Alert";
 
 const Contact = () => {
-  const [success, setSuccess] = useState(false);
+  // const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    if (window.location.search.includes("success=true")) {
-      setSuccess(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.location.search.includes("success=true")) {
+  //     setSuccess(true);
+  //   }
+  // }, []);
 
   // Alert msg
   // const [alertMessages, setAlertMessages] = useState([]);
@@ -16,7 +16,21 @@ const Contact = () => {
   //   setAlertMessages((prev) => prev.concat(msg));
   // };
   // addAlertMessage("Message sent successfully");
-  const alertMessages = "Message sent successfully";
+  // const alertMessages = "Message sent successfully";
+
+  const Contact = () => {
+  // Alert msg
+  const [alertMessages, setAlertMessages] = useState([]);
+  const addAlertMessage = (msg) => {
+    setAlertMessages((prev) => prev.concat(msg));
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    addAlertMessage("Message sent successfully");
+    e.target.reset();
+  };
 
   return (
     <section className="contact fullwidth" id="contact">
@@ -30,7 +44,8 @@ const Contact = () => {
             name="contact"
             method="POST"
             data-netlify="true"
-            action="/#contact?success=true"
+            // action="/?success=true"
+            onSubmit={sendEmail}
           >
             <input type="hidden" name="form-name" value="contact" />
             <input
@@ -60,11 +75,12 @@ const Contact = () => {
               Send
             </button>
             {/* {success && <Alert messages={alertMessages} />} */}
-            {success && (
+            {/* {success && (
               <p className="alert-success floating-alert">
                 Message Sent Successfully
               </p>
-            )}
+            )} */}
+            <Alert messages={alertMessages} />
           </form>
         </div>
       </div>
