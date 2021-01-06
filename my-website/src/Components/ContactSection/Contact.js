@@ -9,6 +9,8 @@ const Contact = () => {
     setAlertMessages((prev) => prev.concat(msg));
   };
 
+  const [submitResponse, setSubmitResponse] = useState("");
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -22,12 +24,16 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setSubmitResponse("success");
+          addAlertMessage("Message sent successfully");
         },
         (error) => {
           console.log(error.text);
+          setSubmitResponse("error");
+          addAlertMessage("Error sending email. Please try again.");
         }
       );
-    addAlertMessage("Message sent successfully");
+
     e.target.reset();
   };
 
@@ -67,7 +73,7 @@ const Contact = () => {
               Send
             </button>
           </form>
-          <Alert messages={alertMessages} />
+          <Alert messages={alertMessages} alertType={submitResponse} />
         </div>
       </div>
     </section>

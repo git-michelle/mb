@@ -8,7 +8,7 @@ import Footer from "./Components/Footer";
 import "./App.scss";
 import ScrollToTop from "./Components/Navigation/ScrollToTop";
 
-function App() {
+const App = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
 
   const toggleSideDrawer = () => {
@@ -27,6 +27,6 @@ function App() {
       <Footer />
     </Router>
   );
-}
+};
 
 export default App;
