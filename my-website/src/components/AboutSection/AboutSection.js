@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ReactGA from "react-ga";
 
 const AboutSection = () => {
   return (
@@ -14,7 +15,16 @@ const AboutSection = () => {
           psychology and computer science, I am also passionate about research
           and user experience.
           <br />
-          <Link to="/more" className="btn btn-outline">
+          <Link
+            to="/more"
+            className="btn btn-outline"
+            onClick={() => {
+              ReactGA.event({
+                category: "Buttons",
+                action: "Clicked Learn More",
+              });
+            }}
+          >
             Learn More
           </Link>
           <br />

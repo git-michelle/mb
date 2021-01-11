@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactGA from "react-ga";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Toolbar from "./Components/Navigation/Toolbar";
 import SideDrawer from "./Components/Navigation/SideDrawer";
@@ -7,6 +8,8 @@ import MoreInfoPage from "./Screens/MoreInfoPage";
 import Footer from "./Components/Footer";
 import "./App.scss";
 import ScrollToTop from "./Components/Navigation/ScrollToTop";
+
+ReactGA.initialize(process.env.REACT_APP_GAnalytics_ID);
 
 const App = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);

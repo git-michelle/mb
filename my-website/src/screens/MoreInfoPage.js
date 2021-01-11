@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import Carousel from "../Components/Carousel/Carousel";
 import { ImageData } from "../Components/Carousel/ImageData";
 import Modal from "../Components/Modal";
+import ReactGA from "react-ga";
 
 const MoreInfoPage = () => {
   const [showCarousel, setShowCarousel] = useState(false);
@@ -84,7 +85,16 @@ const MoreInfoPage = () => {
                 and Situational Perception in Uncertain, Automated Driving
                 Conditions
               </p>
-              <button className="btn-outline" onClick={handleButtonClick}>
+              <button
+                className="btn-outline"
+                onClick={() => {
+                  handleButtonClick();
+                  ReactGA.event({
+                    category: "Buttons",
+                    action: "Clicked Course Work",
+                  });
+                }}
+              >
                 View Course Work & Projects
               </button>
               <h3>BSocSci Honours in Psychology</h3>
