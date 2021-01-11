@@ -1,9 +1,8 @@
 import React, { Fragment, useState } from "react";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import { VscClose } from "react-icons/vsc";
+import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 
 const Carousel = (props) => {
-  const { displayItems, close } = props;
+  const { displayItems } = props;
 
   const [current, setCurrent] = useState(0);
   const totalItems = displayItems.length - 1;
@@ -24,10 +23,11 @@ const Carousel = (props) => {
     <Fragment>
       <div className="carousel">
         <div className="carousel-section-top">
-          <FaChevronLeft
-            className="carousel-chevron carousel-chevron-left"
+          <VscChevronLeft
+            className="carousel-chevron carousel-chevron-left "
             onClick={prevImg}
           />
+          <div className="loader"></div>
           <div className="carousel-img-container">
             {displayItems.map((item, index) => {
               return (
@@ -43,7 +43,7 @@ const Carousel = (props) => {
               );
             })}
           </div>
-          <FaChevronRight
+          <VscChevronRight
             className="carousel-chevron carousel-chevron-right"
             onClick={nextImg}
           />
@@ -58,11 +58,6 @@ const Carousel = (props) => {
             <p className="item-count">
               {`Image ${current + 1} of ${totalItems + 1}`}
             </p>
-          </div>
-          <div className="carousel-info-right">
-            <button type="button" onClick={close}>
-              <VscClose className="close-icon" />
-            </button>
           </div>
         </div>
       </div>

@@ -20,8 +20,12 @@ const MoreInfoPage = () => {
 
   return (
     <Fragment>
-      <Modal show={showCarousel} closeModal={backdropClicked}>
-        <Carousel displayItems={ImageData} close={handleCloseBtn} />
+      <Modal
+        show={showCarousel}
+        closeModal={backdropClicked}
+        close={handleCloseBtn}
+      >
+        <Carousel displayItems={ImageData} />
       </Modal>
       <div className="more-info fullwidth" id="more-info">
         <section className="container-centered-content ">

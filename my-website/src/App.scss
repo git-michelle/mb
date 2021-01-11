@@ -129,6 +129,10 @@ ul {
   z-index: 500;
   background-color: #fff;
   width: 65%;
+  min-height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   padding: 1.5rem;
   left: 17.5%;
   top: 10%;
@@ -143,64 +147,45 @@ ul {
   @media (max-width: 60em) {
     .modal {
       width: 90%;
+      min-height: 35%;
       left: 5%; } }
+  .modal button {
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: transparent; }
+    .modal button:focus {
+      outline: none; }
+  .modal .close-icon {
+    font-size: 3rem;
+    color: #222;
+    transition: all 1s; }
+    .modal .close-icon:hover {
+      transform: scale(1.1);
+      color: red; }
 
 .carousel {
   display: flex;
+  position: relative;
   flex-direction: column;
-  width: 100%;
-  margin: auto; }
+  width: 100%; }
   .carousel-close {
     display: none; }
   .carousel-open {
     display: contents; }
   .carousel-section-top {
     display: flex;
+    position: relative;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 30rem; }
-    @media (max-width: 37.5em) {
-      .carousel-section-top {
-        min-height: 20rem; } }
+    align-items: center; }
   .carousel-img {
     width: 100%;
     height: auto;
     object-fit: cover; }
-  .carousel-section-bottom {
-    background-color: transparent;
-    display: flex;
-    padding: 1rem;
-    justify-content: space-between; }
-    .carousel-section-bottom-left {
-      display: flex;
-      flex-direction: column; }
-      .carousel-section-bottom-left .item-count {
-        font-size: 1.3rem; }
-    @media (max-width: 37.5em) {
-      .carousel-section-bottom .item-description {
-        font-size: 1.5rem; } }
-    .carousel-section-bottom button {
-      padding: 0;
-      border: none;
-      cursor: pointer;
-      background-color: transparent; }
-      .carousel-section-bottom button:focus {
-        outline: none; }
-    .carousel-section-bottom .close-icon {
-      font-size: 3rem;
-      color: #222;
-      transition: all 1s; }
-      .carousel-section-bottom .close-icon:hover {
-        transform: scale(1.1);
-        color: red; }
   .carousel-chevron {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
+    color: #222;
     font-size: 4rem;
-    padding: 0.7rem;
-    margin: 1rem;
-    border-radius: 50%;
+    margin: 0 1rem;
     cursor: pointer;
     user-select: none; }
     @media (max-width: 60em) {
@@ -208,9 +193,24 @@ ul {
         margin: 0.5rem;
         font-size: 3rem; } }
     .carousel-chevron-left {
-      justify-self: flex-start; }
+      position: fixed;
+      left: 0.5rem; }
     .carousel-chevron-right {
-      justify-self: flex-end; }
+      position: fixed;
+      right: 0.5rem; }
+  .carousel-section-bottom {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    .carousel-section-bottom .item-count {
+      font-size: 1.3rem; }
+    @media (max-width: 37.5em) {
+      .carousel-section-bottom .item-description {
+        font-size: 1.5rem; } }
 
 .nav {
   background: transparent;
