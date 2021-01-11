@@ -67,7 +67,7 @@
   position: relative;
   flex-direction: column;
   width: 100%;
-  // margin: auto;
+  height: 100%;
 
   &-close {
     display: none;
@@ -79,9 +79,7 @@
 
   &-section-top {
     display: flex;
-    position: relative;
     justify-content: center;
-    align-items: center;
   }
 
   &-img {
@@ -104,11 +102,13 @@
     &-left {
       position: fixed;
       left: 0.5rem;
+      top: 43%;
     }
 
     &-right {
       position: fixed;
       right: 0.5rem;
+      top: 43%;
     }
   }
 

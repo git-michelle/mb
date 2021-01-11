@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactGA from "react-ga";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Toolbar from "./Components/Navigation/Toolbar";
@@ -9,9 +9,12 @@ import Footer from "./Components/Footer";
 import "./App.scss";
 import ScrollToTop from "./Components/Navigation/ScrollToTop";
 
-ReactGA.initialize(process.env.REACT_APP_GAnalytics_ID);
-
 const App = () => {
+  useEffect(() => {
+    ReactGA.initialize(process.env.REACT_APP_GAnalytics_ID);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   const [showSideDrawer, setShowSideDrawer] = useState(false);
 
   const toggleSideDrawer = () => {
