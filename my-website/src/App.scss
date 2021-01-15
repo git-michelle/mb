@@ -528,6 +528,18 @@ ul {
       min-height: 3rem;
       width: 14rem; }
 
+.small {
+  font-size: 0.9rem;
+  color: #bbb;
+  text-align: end;
+  margin-top: 0.3rem; }
+  .small a {
+    color: rgba(76, 139, 245, 0.8);
+    text-decoration: none; }
+
+.grecaptcha-badge {
+  visibility: hidden; }
+
 .floating-alerts .floating-alert:last-of-type {
   display: block; }
 

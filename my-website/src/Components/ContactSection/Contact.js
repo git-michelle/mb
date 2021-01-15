@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import Alert from "./Alert";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   // Alert msg
@@ -11,8 +12,17 @@ const Contact = () => {
 
   const [submitResponse, setSubmitResponse] = useState("");
 
-  const sendEmail = (e) => {
+  // For invisible recaptcha -> async await necessary for success on first submit
+  const recaptchaRef = React.createRef();
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
+  const sendEmail = async (e) => {
     e.preventDefault();
+
+    await recaptchaRef.current.executeAsync();
 
     emailjs
       .sendForm(
@@ -26,6 +36,7 @@ const Contact = () => {
           console.log(result.text);
           setSubmitResponse("success");
           addAlertMessage("Message sent successfully");
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
@@ -33,8 +44,6 @@ const Contact = () => {
           addAlertMessage("Error sending email. Please try again.");
         }
       );
-
-    e.target.reset();
   };
 
   return (
@@ -68,6 +77,19 @@ const Contact = () => {
               name="message"
               className="input-style"
               required
+            />
+            <p className="small">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <a href="https://policies.google.com/privacy">Privacy Policy</a>{" "}
+              and{" "}
+              <a href="https://policies.google.com/terms">Terms of Service </a>
+              apply.
+            </p>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              size="invisible"
+              sitekey={process.env.REACT_APP_CAPTCHA_KEY_INVISIBLE}
+              onChange={onChange}
             />
             <button type="submit" className="btn-outline">
               Send
