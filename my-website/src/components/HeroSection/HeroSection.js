@@ -4,14 +4,17 @@ const HeroSection = () => {
   return (
     <Fragment>
       <section className="hero">
-        <div className="hero-sphere box-shadow">
-          <div className="hero-sphere-inner box-shadow"></div>
-        </div>
-        <div className="hero-text">
+        <div className="hero-intro">
           <h1 className="hero-text-name">Hi, I'm Michelle</h1>
-          <h2 className="hero-text-desc">Front-End Developer</h2>
-          <h2 className="hero-text-desc">UX Enthusiast</h2>
-          <h2 className="hero-text-desc">Researcher</h2>
+        </div>
+        <div className="hero-flexbox">
+          <ul className="hero-flexbox-text-area hero-text-ul">
+            <li className="hero-text-li">Front-End Developer</li>
+            <li className="hero-text-li">UX Enthusiast</li>
+          </ul>
+          <div className="hero-flexbox-image-area">
+            <div className="caricature box-shadow"></div>
+          </div>
         </div>
 
         {/* bottom wave  */}

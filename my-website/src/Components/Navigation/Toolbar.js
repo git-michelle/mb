@@ -19,12 +19,15 @@ const Toolbar = (props) => {
   return (
     <nav className={navcolor ? "nav nav-active box-shadow" : "nav"}>
       <div className="nav-content">
-        <Link to="/">
-          <img
+        <Link to="/" className="logo-container">
+          <div>
+            <p className="logo-text">m</p>
+          </div>
+          {/* <img
             className="logo"
             src="/images/logo-tertiary.svg"
             alt="letter m in circle"
-          />
+          /> */}
         </Link>
         <NavItems />
       </div>

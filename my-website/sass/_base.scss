@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
+
 // RESPONSIVE BREAKPOINTS
 $bp-lg: 80em; //1280px
 $bp-md: 60em; //960px
@@ -35,7 +37,7 @@ $text-light: #fff;
 h1,
 h2,
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Slab", serif;
   color: $text-dark;
 }
 
@@ -49,7 +51,7 @@ h4 {
 
 p,
 li {
-  font-family: "Hind", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
   line-height: 1.6;
   color: $text-dark;
@@ -63,7 +65,7 @@ li {
 h1 {
   font-size: 8rem;
   @media (max-width: $bp-sm) {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 }
 

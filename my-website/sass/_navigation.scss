@@ -11,7 +11,7 @@
   }
 
   &-content {
-    max-width: 95%;
+    max-width: 90%;
     margin: auto;
     padding: 0 2rem;
     overflow: hidden;
@@ -19,9 +19,27 @@
     justify-content: space-between;
     align-items: center;
 
-    .logo {
+    .logo-container {
       margin-top: 0.5rem;
+      width: 6rem;
       height: 6rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-light;
+      background-color: $color-primary;
+
+      border: 0.3rem solid;
+      border-radius: 50%;
+      text-decoration: none;
+
+      .logo-text {
+        font-size: 3.5rem;
+        color: $text-light;
+        font-family: "Roboto Slab", serif;
+        padding-bottom: 1rem;
+      }
     }
 
     ul {
@@ -37,7 +55,7 @@
           transition: border-color 0.5s;
           &:hover,
           &-active {
-            border-color: $color-tertiary;
+            border-color: $color-secondary;
           }
         }
       }

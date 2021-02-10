@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 h1,
 h2,
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Slab", serif;
   color: #222; }
 
 h2,
@@ -13,7 +15,7 @@ h4 {
 
 p,
 li {
-  font-family: "Hind", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
   line-height: 1.6;
   color: #222; }
@@ -26,7 +28,7 @@ h1 {
   font-size: 8rem; }
   @media (max-width: 37.5em) {
     h1 {
-      font-size: 5rem; } }
+      font-size: 3.5rem; } }
 
 h2 {
   font-size: 3rem; }
@@ -223,16 +225,30 @@ ul {
   .nav-active {
     background-color: rgba(255, 255, 255, 0.8); }
   .nav-content {
-    max-width: 95%;
+    max-width: 90%;
     margin: auto;
     padding: 0 2rem;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .nav-content .logo {
+    .nav-content .logo-container {
       margin-top: 0.5rem;
-      height: 6rem; }
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background-color: #77cb5c;
+      border: 0.3rem solid;
+      border-radius: 50%;
+      text-decoration: none; }
+      .nav-content .logo-container .logo-text {
+        font-size: 3.5rem;
+        color: #fff;
+        font-family: "Roboto Slab", serif;
+        padding-bottom: 1rem; }
     .nav-content ul {
       display: flex; }
       .nav-content ul li {
@@ -243,7 +259,7 @@ ul {
           border-bottom: 0.45rem transparent solid;
           transition: border-color 0.5s; }
           .nav-content ul li .nav-link:hover, .nav-content ul li .nav-link-active {
-            border-color: #bd338e; }
+            border-color: #e0bf24; }
 
 @media (max-width: 37.5em) {
   .nav-content {
@@ -295,9 +311,92 @@ ul {
 
 .hero {
   height: 95vh;
-  background: #e0bf24;
+  background: #77cb5c;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .hero-intro {
+    text-align: center; }
+    .hero-intro h1.hero-text-name:before {
+      content: "<h1>";
+      padding-right: 1.5rem;
+      font-family: "Handlee", cursive;
+      color: #97d783;
+      font-size: 2rem; }
+    .hero-intro h1.hero-text-name:after {
+      content: "</h1>";
+      padding-left: 1.5rem;
+      font-family: "Handlee", cursive;
+      color: #97d783;
+      font-size: 2rem; }
+  .hero-flexbox {
+    display: flex;
+    margin: 5rem;
+    max-width: 96rem; }
+    @media (max-width: 60em) {
+      .hero-flexbox {
+        flex-direction: column-reverse; } }
+    .hero-flexbox-text-area {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      @media (max-width: 60em) {
+        .hero-flexbox-text-area {
+          width: 100%; } }
+    .hero-flexbox .hero-text-ul {
+      position: relative; }
+      .hero-flexbox .hero-text-ul:before {
+        content: "<ul>  ";
+        font-family: "Handlee", cursive;
+        color: #97d783;
+        font-size: 2rem; }
+      .hero-flexbox .hero-text-ul:after {
+        content: "  </ul>";
+        font-family: "Handlee", cursive;
+        color: #97d783;
+        font-size: 2rem; }
+      .hero-flexbox .hero-text-ul .hero-text-li {
+        margin-left: 3rem;
+        font-size: 3rem; }
+        @media (max-width: 37.5em) {
+          .hero-flexbox .hero-text-ul .hero-text-li {
+            font-size: 2rem; } }
+        .hero-flexbox .hero-text-ul .hero-text-li:before {
+          content: "<li>  ";
+          font-family: "Handlee", cursive;
+          color: #97d783;
+          font-size: 1.6rem; }
+        .hero-flexbox .hero-text-ul .hero-text-li:after {
+          content: "  </li>";
+          font-family: "Handlee", cursive;
+          color: #97d783;
+          font-size: 1.6rem; }
+    .hero-flexbox-image-area {
+      width: 35%; }
+      @media (max-width: 60em) {
+        .hero-flexbox-image-area {
+          width: 100%;
+          margin-bottom: 5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center; } }
+      .hero-flexbox-image-area .caricature {
+        height: 30rem;
+        width: 30rem;
+        border-radius: 50%;
+        background: url(../src/Components/HeroSection/caricature.png);
+        background-size: cover;
+        background-repeat: no-repeat; }
+        .hero-flexbox-image-area .caricature:hover {
+          transform: rotateY(180deg); }
+        @media (max-width: 37.5em) {
+          .hero-flexbox-image-area .caricature {
+            height: 25rem;
+            width: 25rem; } }
   .hero-sphere {
     position: absolute;
     top: -35rem;
@@ -513,7 +612,7 @@ ul {
     .contact-form-area form .input-style {
       border: 0.1rem solid #eee;
       padding: 0.7rem;
-      font-family: "Hind", sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 1.6rem;
       line-height: 1.2;
       color: #222; }
