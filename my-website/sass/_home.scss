@@ -1,539 +1,536 @@
-@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 //HERO SECTION
 .hero {
-  height: 95vh;
-  background: $color-primary;
-  position: relative;
-  overflow: hidden;
-  color: $text-dark;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	height: 95vh;
+	background: $color-primary;
+	position: relative;
+	overflow: hidden;
+	color: $text-dark;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-  &-intro {
-    text-align: center;
+	&-intro {
+		text-align: center;
 
-    h1.hero-text-name {
-      &:before {
-        content: "<h1>";
-        padding-right: 1.5rem;
-        font-family: "Handlee", cursive;
-        color: lighten($color-primary, 10%);
-        font-size: 2rem;
-      }
-      &:after {
-        content: "</h1>";
-        padding-left: 1.5rem;
-        font-family: "Handlee", cursive;
-        color: lighten($color-primary, 10%);
-        font-size: 2rem;
-      }
-    }
-  }
+		h1.hero-text-name {
+			&:before {
+				content: '<h1>';
+				padding-right: 1.5rem;
+				font-family: 'Handlee', cursive;
+				color: lighten($color-primary, 10%);
+				font-size: 2rem;
+			}
+			&:after {
+				content: '</h1>';
+				padding-left: 1.5rem;
+				font-family: 'Handlee', cursive;
+				color: lighten($color-primary, 10%);
+				font-size: 2rem;
+			}
+		}
+	}
 
-  &-flexbox {
-    display: flex;
-    margin: $marg-md;
-    max-width: $page-content-width;
+	&-flexbox {
+		display: flex;
+		margin: $marg-md;
+		max-width: $page-content-width;
 
-    @media (max-width: $bp-md) {
-      flex-direction: column-reverse;
-    }
+		@media (max-width: $bp-md) {
+			flex-direction: column-reverse;
+		}
 
-    &-text-area {
-      width: 65%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      @media (max-width: $bp-md) {
-        width: 100%;
-      }
-    }
+		&-text-area {
+			width: 65%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			@media (max-width: $bp-md) {
+				width: 100%;
+			}
+		}
 
-    .hero-text-ul {
-      position: relative;
+		.hero-text-ul {
+			position: relative;
 
-      &:before {
-        content: "<ul>  ";
-        font-family: "Handlee", cursive;
-        color: lighten($color-primary, 10%);
-        font-size: 2rem;
-      }
-      &:after {
-        content: "  </ul>";
-        font-family: "Handlee", cursive;
-        color: lighten($color-primary, 10%);
-        font-size: 2rem;
-      }
+			&:before {
+				content: '<ul>  ';
+				font-family: 'Handlee', cursive;
+				color: lighten($color-primary, 10%);
+				font-size: 2rem;
+			}
+			&:after {
+				content: '  </ul>';
+				font-family: 'Handlee', cursive;
+				color: lighten($color-primary, 10%);
+				font-size: 2rem;
+			}
 
-      .hero-text-li {
-        margin-left: $marg-sm;
-        font-size: 3rem;
-        @media (max-width: $bp-sm) {
-          font-size: 2rem;
-        }
+			.hero-text-li {
+				margin-left: $marg-sm;
+				font-size: 3rem;
+				@media (max-width: $bp-sm) {
+					font-size: 2rem;
+				}
 
-        &:before {
-          content: "<li>  ";
-          font-family: "Handlee", cursive;
-          color: lighten($color-primary, 10%);
-          font-size: 1.6rem;
-        }
-        &:after {
-          content: "  </li>";
-          font-family: "Handlee", cursive;
+				&:before {
+					content: '<li>  ';
+					font-family: 'Handlee', cursive;
+					color: lighten($color-primary, 10%);
+					font-size: 1.6rem;
+				}
+				&:after {
+					content: '  </li>';
+					font-family: 'Handlee', cursive;
 
-          color: lighten($color-primary, 10%);
-          font-size: 1.6rem;
-        }
-      }
-    }
+					color: lighten($color-primary, 10%);
+					font-size: 1.6rem;
+				}
+			}
+		}
 
-    &-image-area {
-      width: 35%;
+		&-image-area {
+			width: 35%;
 
-      @media (max-width: $bp-md) {
-        width: 100%;
-        margin-bottom: $marg-md;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+			@media (max-width: $bp-md) {
+				width: 100%;
+				margin-bottom: $marg-md;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 
-      .caricature {
-        height: 30rem;
-        width: 30rem;
-        border-radius: 50%;
-        background: url(../src/Components/HeroSection/caricature.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        &:hover {
-          transform: rotateY(180deg);
-        }
-        @media (max-width: $bp-sm) {
-          height: 25rem;
-          width: 25rem;
-        }
-      }
-    }
-  }
+			.caricature {
+				height: 30rem;
+				width: 30rem;
+				border-radius: 50%;
+				background: url(../src/Components/HeroSection/caricature.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				@media (max-width: $bp-sm) {
+					height: 25rem;
+					width: 25rem;
+				}
+			}
+		}
+	}
 
-  &-sphere {
-    position: absolute;
-    top: -35rem;
-    right: -35rem;
-    width: 100%;
-    height: 120%;
-    background: radial-gradient(
-      lighten($color-primary, 22%),
-      lighten($color-primary, 17%) 20%,
-      darken($color-primary, 10%) 80%
-    );
-    border-radius: 50%;
-    transition: all 2s ease-in-out;
-    animation: bobble 5s infinite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	&-sphere {
+		position: absolute;
+		top: -35rem;
+		right: -35rem;
+		width: 100%;
+		height: 120%;
+		background: radial-gradient(
+			lighten($color-primary, 22%),
+			lighten($color-primary, 17%) 20%,
+			darken($color-primary, 10%) 80%
+		);
+		border-radius: 50%;
+		transition: all 2s ease-in-out;
+		animation: bobble 5s infinite;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    @media (max-width: $bp-md) {
-      width: 100%;
-      height: 80%;
-      top: -15rem;
-      right: -15rem;
-    }
-    &-inner {
-      width: 75%;
-      height: 75%;
-      background: radial-gradient(
-        lighten($color-secondary, 25%),
-        lighten($color-secondary, 17%) 30%,
-        darken($color-secondary, 10%) 80%
-      );
-      border-radius: 50%;
-    }
-  }
+		@media (max-width: $bp-md) {
+			width: 100%;
+			height: 80%;
+			top: -15rem;
+			right: -15rem;
+		}
+		&-inner {
+			width: 75%;
+			height: 75%;
+			background: radial-gradient(
+				lighten($color-secondary, 25%),
+				lighten($color-secondary, 17%) 30%,
+				darken($color-secondary, 10%) 80%
+			);
+			border-radius: 50%;
+		}
+	}
 
-  &-text {
-    position: absolute;
-    padding-left: $pad-md;
-    padding-top: $pad-lg;
+	&-text {
+		position: absolute;
+		padding-left: $pad-md;
+		padding-top: $pad-lg;
 
-    @media (max-width: $bp-md) {
-      padding-left: $pad-xs;
-    }
+		@media (max-width: $bp-md) {
+			padding-left: $pad-xs;
+		}
 
-    &-name {
-      margin-bottom: $marg-xs;
-      margin-top: $pad-lg;
-      color: $text-dark;
-      line-height: 1.7;
-      @media (max-width: $bp-md) {
-        line-height: 1.1;
-      }
-    }
-    &-desc {
-      font-weight: 400;
-      color: $text-dark;
-      line-height: 1.4;
-      @media (max-width: $bp-md) {
-        font-size: 2.5rem;
-      }
-    }
-  }
+		&-name {
+			margin-bottom: $marg-xs;
+			margin-top: $pad-lg;
+			color: $text-dark;
+			line-height: 1.7;
+			@media (max-width: $bp-md) {
+				line-height: 1.1;
+			}
+		}
+		&-desc {
+			font-weight: 400;
+			color: $text-dark;
+			line-height: 1.4;
+			@media (max-width: $bp-md) {
+				font-size: 2.5rem;
+			}
+		}
+	}
 
-  &-wave {
-    position: absolute;
-    bottom: 0rem;
-    left: 0rem;
-    fill: $color-light;
-  }
+	&-wave {
+		position: absolute;
+		bottom: 0rem;
+		left: 0rem;
+		fill: $color-light;
+	}
 }
 
 @keyframes bobble {
-  0% {
-    transform: scale(1.001);
-    background-color: $color-primary;
-  }
-  50% {
-    transform: scale(1.01);
-    background-color: $color-secondary;
-  }
+	0% {
+		transform: scale(1.001);
+		background-color: $color-primary;
+	}
+	50% {
+		transform: scale(1.01);
+		background-color: $color-secondary;
+	}
 }
 
 // ABOUT SECTION
 .about {
-  text-align: center;
-  position: relative;
+	text-align: center;
+	position: relative;
 
-  .btn {
-    margin-bottom: $marg-lg;
+	.btn {
+		margin-bottom: $marg-lg;
 
-    @media (max-width: $bp-md) {
-      margin-bottom: $marg-md;
-    }
-  }
+		@media (max-width: $bp-md) {
+			margin-bottom: $marg-md;
+		}
+	}
 
-  &-wave {
-    position: absolute;
-    bottom: 0rem;
-    left: 0rem;
-    fill: $color-secondary;
-  }
+	&-wave {
+		position: absolute;
+		bottom: 0rem;
+		left: 0rem;
+		fill: $color-secondary;
+	}
 }
 
 // SKILLS SECTION
 .skills {
-  background-color: $color-secondary;
-  text-align: center;
-  position: relative;
+	background-color: $color-secondary;
+	text-align: center;
+	position: relative;
 
-  &-card {
-    padding: $pad-md $pad-sm;
-    background-color: $color-light;
-    margin: 0 $marg-xs $marg-lg;
-    min-width: 22rem;
+	&-card {
+		padding: $pad-md $pad-sm;
+		background-color: $color-light;
+		margin: 0 $marg-xs $marg-lg;
+		min-width: 22rem;
 
-    @media (max-width: $bp-md) {
-      margin: $marg-sm auto 0;
-    }
-  }
+		@media (max-width: $bp-md) {
+			margin: $marg-sm auto 0;
+		}
+	}
 
-  &-icon {
-    font-size: 3rem;
-    color: $color-secondary;
-    margin-bottom: $marg-xs;
-  }
+	&-icon {
+		font-size: 3rem;
+		color: $color-secondary;
+		margin-bottom: $marg-xs;
+	}
 
-  &-wave {
-    position: absolute;
-    bottom: 0rem;
-    left: 0rem;
-    fill: $color-light;
-  }
+	&-wave {
+		position: absolute;
+		bottom: 0rem;
+		left: 0rem;
+		fill: $color-light;
+	}
 }
 
 // PROJECT PORTFOLIO SECTION
 .projects {
-  text-align: center;
+	text-align: center;
 }
 
 .card {
-  // CARD FUNCTIONALITY
-  perspective: 180rem;
-  -moz-perspective: 180rem;
-  position: relative;
-  height: 44rem; // must be same as __side height
-  margin: 0 $marg-sm;
-  min-width: 36rem;
-  @media (max-width: $bp-md) {
-    margin: $marg-xs;
-  }
+	// CARD FUNCTIONALITY
+	perspective: 180rem;
+	-moz-perspective: 180rem;
+	position: relative;
+	height: 44rem; // must be same as __side height
+	margin: 0 $marg-sm;
+	min-width: 36rem;
+	@media (max-width: $bp-md) {
+		margin: $marg-xs;
+	}
 
-  &-side {
-    height: 44rem;
-    min-width: 36rem;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    backface-visibility: hidden;
-    border-radius: 0.2rem;
-    overflow: hidden; // to stop img covering border radius
-    box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.2);
+	&-side {
+		height: 44rem;
+		min-width: 36rem;
+		transition: all 0.8s ease;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		backface-visibility: hidden;
+		border-radius: 0.2rem;
+		overflow: hidden; // to stop img covering border radius
+		box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.2);
 
-    &--front {
-      color: $text-dark;
-    }
+		&--front {
+			color: $text-dark;
+		}
 
-    &--back {
-      transform: rotateY(180deg);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+		&--back {
+			transform: rotateY(180deg);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 
-      &-1 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-tertiary,
-          lighten($color-tertiary, 10%),
-          darken($color-tertiary, 30%)
-        );
-      }
+			&-1 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-tertiary,
+					lighten($color-tertiary, 10%),
+					darken($color-tertiary, 30%)
+				);
+			}
 
-      &-2 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary,
-          lighten($color-primary, 10%),
-          darken($color-primary, 30%)
-        );
-      }
+			&-2 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-primary,
+					lighten($color-primary, 10%),
+					darken($color-primary, 30%)
+				);
+			}
 
-      &-3 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-secondary,
-          lighten($color-secondary, 10%),
-          darken($color-secondary, 30%)
-        );
-      }
-    }
-  }
+			&-3 {
+				background-image: linear-gradient(
+					to right bottom,
+					$color-secondary,
+					lighten($color-secondary, 10%),
+					darken($color-secondary, 30%)
+				);
+			}
+		}
+	}
 
-  &:hover &-side--front {
-    transform: rotateY(-180deg);
-  }
+	&:hover &-side--front {
+		transform: rotateY(-180deg);
+	}
 
-  &:hover &-side--back {
-    transform: rotateY(0);
-  }
+	&:hover &-side--back {
+		transform: rotateY(0);
+	}
 
-  // FRONT STYLING
-  // img
-  &-img {
-    background-size: cover;
-    height: 55%;
-    background-blend-mode: screen;
-    border-bottom: $color-light-gray 0.1rem solid;
+	// FRONT STYLING
+	// img
+	&-img {
+		background-size: cover;
+		height: 55%;
+		background-blend-mode: screen;
+		border-bottom: $color-light-gray 0.1rem solid;
 
-    &-1 {
-      background-image: url("https://i.imgur.com/Pa2qh4e.gif");
-    }
+		&-1 {
+			background-image: url('https://i.imgur.com/Pa2qh4e.gif');
+		}
 
-    &-2 {
-      background-image: url("https://i.imgur.com/8fQa2tk.gif");
-    }
+		&-2 {
+			background-image: url('https://i.imgur.com/8fQa2tk.gif');
+		}
 
-    // &-3 {
-    //   background-image: url("!#");
-    // }
-  }
-  //heading
-  &-project-overview {
-    padding: $pad-sm;
-  }
+		// &-3 {
+		//   background-image: url("!#");
+		// }
+	}
+	//heading
+	&-project-overview {
+		padding: $pad-sm;
+	}
 
-  &-project-heading {
-    margin-bottom: $marg-xs;
-    color: $color-dark;
-    padding: 0.3rem;
+	&-project-heading {
+		margin-bottom: $marg-xs;
+		color: $color-dark;
+		padding: 0.3rem;
 
-    &-1 {
-      background-color: rgba($color-tertiary, 0.7);
-    }
-    &-2 {
-      background-color: rgba($color-primary, 0.7);
-    }
-    &-3 {
-      background-color: rgba($color-secondary, 0.7);
-    }
-  }
+		&-1 {
+			background-color: rgba($color-tertiary, 0.7);
+		}
+		&-2 {
+			background-color: rgba($color-primary, 0.7);
+		}
+		&-3 {
+			background-color: rgba($color-secondary, 0.7);
+		}
+	}
 
-  // BACK STYLING
-  //details
-  &-details {
-    ul {
-      width: 70%;
-      margin: $marg-md auto;
+	// BACK STYLING
+	//details
+	&-details {
+		ul {
+			width: 70%;
+			margin: $marg-md auto;
 
-      li {
-        padding-top: 0.5rem;
-      }
-    }
-  }
+			li {
+				padding-top: 0.5rem;
+			}
+		}
+	}
 
-  &-links {
-    margin-bottom: $marg-md;
+	&-links {
+		margin-bottom: $marg-md;
 
-    &-icon {
-      font-size: 3.5rem;
-      margin: $marg-xs;
-      color: $color-dark;
-      transition: all 1s;
+		&-icon {
+			font-size: 3.5rem;
+			margin: $marg-xs;
+			color: $color-dark;
+			transition: all 1s;
 
-      &:hover {
-        color: $color-light;
-        transform: scale(1.2);
-      }
-    }
-  }
+			&:hover {
+				color: $color-light;
+				transform: scale(1.2);
+			}
+		}
+	}
 }
 
 // CONTACT SECTION
 
 .contact {
-  &-container {
-    display: flex;
-    width: 100%;
-    @media (max-width: $bp-sm) {
-      flex-direction: column;
-    }
-  }
+	&-container {
+		display: flex;
+		width: 100%;
+		@media (max-width: $bp-sm) {
+			flex-direction: column;
+		}
+	}
 
-  &-img-area {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
-    @media (max-width: $bp-sm) {
-      width: 100%;
-      margin-bottom: $marg-sm;
-    }
+	&-img-area {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: space-between;
+		@media (max-width: $bp-sm) {
+			width: 100%;
+			margin-bottom: $marg-sm;
+		}
 
-    img {
-      margin: 0 auto;
-      padding-bottom: $pad-md;
-      width: 80%;
-    }
-  }
+		img {
+			margin: 0 auto;
+			padding-bottom: $pad-md;
+			width: 80%;
+		}
+	}
 
-  &-form-area {
-    width: 50%;
-    @media (max-width: $bp-sm) {
-      width: 100%;
-    }
+	&-form-area {
+		width: 50%;
+		@media (max-width: $bp-sm) {
+			width: 100%;
+		}
 
-    position: relative; //to position alert relative to it
+		position: relative; //to position alert relative to it
 
-    form {
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      width: 80%;
-      font-size: 1.6rem;
-      @media (max-width: $bp-sm) {
-        width: 100%;
-      }
+		form {
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			width: 80%;
+			font-size: 1.6rem;
+			@media (max-width: $bp-sm) {
+				width: 100%;
+			}
 
-      .input-style {
-        border: 0.1rem solid $color-light-gray;
-        padding: 0.7rem;
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.6rem;
-        line-height: 1.2;
-        color: $text-dark;
-        &:focus {
-          outline: none;
-          border: 0.1rem solid $color-primary;
-        }
-      }
+			.input-style {
+				border: 0.1rem solid $color-light-gray;
+				padding: 0.7rem;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.6rem;
+				line-height: 1.2;
+				color: $text-dark;
+				&:focus {
+					outline: none;
+					border: 0.1rem solid $color-primary;
+				}
+			}
 
-      input {
-        margin-bottom: $marg-xs;
-      }
+			input {
+				margin-bottom: $marg-xs;
+			}
 
-      button {
-        align-self: flex-end;
-        margin-top: $marg-xs;
-        min-height: 3rem;
-        width: 14rem;
-      }
-    }
-  }
+			button {
+				align-self: flex-end;
+				margin-top: $marg-xs;
+				min-height: 3rem;
+				width: 14rem;
+			}
+		}
+	}
 }
 
 // recaptcha
 .small {
-  font-size: 0.9rem;
-  color: #bbb;
-  text-align: end;
-  margin-top: 0.3rem;
-  a {
-    color: rgba(76, 139, 245, 0.8);
-    text-decoration: none;
-  }
+	font-size: 0.9rem;
+	color: #bbb;
+	text-align: end;
+	margin-top: 0.3rem;
+	a {
+		color: rgba(76, 139, 245, 0.8);
+		text-decoration: none;
+	}
 }
 
 .grecaptcha-badge {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 // alert
 
 .floating-alerts .floating-alert:last-of-type {
-  display: block;
+	display: block;
 }
 
 .alert-success {
-  background-color: #00cc00;
+	background-color: #00cc00;
 }
 
 .alert-warning {
-  background-color: #ff9800;
+	background-color: #ff9800;
 }
 
 .floating-alert {
-  display: none;
-  position: absolute;
-  z-index: 600;
-  bottom: -5rem;
-  right: 3rem;
-  padding: 1rem 2rem;
-  font-size: 1.6rem;
-  color: $text-light;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: floatingAlert ease-in-out 4s forwards;
-  // forwards to keep it hidden after
+	display: none;
+	position: absolute;
+	z-index: 600;
+	bottom: -5rem;
+	right: 3rem;
+	padding: 1rem 2rem;
+	font-size: 1.6rem;
+	color: $text-light;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: floatingAlert ease-in-out 4s forwards;
+	// forwards to keep it hidden after
 }
 
 @keyframes floatingAlert {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  20% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(1.2);
-  }
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+	20% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+		transform: scale(1.2);
+	}
 }
