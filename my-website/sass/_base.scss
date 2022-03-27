@@ -23,6 +23,7 @@ $marg-xs: 1.5rem;
 
 // COLOR VARIABLES
 $color-primary: #77cb5c;
+$color-primary-dark: #2e8540;
 $color-secondary: #e0bf24;
 $color-tertiary: #bd338e;
 
@@ -138,7 +139,7 @@ $page-content-width: 96rem;
 		width: 21rem;
 		min-height: 5rem;
 		background-color: transparent;
-		color: $color-primary;
+		color: $color-primary-dark;
 		border: 0.1rem solid $color-primary;
 
 		&:hover {

@@ -1,134 +1,142 @@
 // BACKDROP
 .backdrop {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  background-color: rgba(240, 240, 240, 0.8);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	background-color: rgba(240, 240, 240, 0.8);
 }
 
 // MODAL
 .modal {
-  position: fixed;
-  z-index: 500;
-  background-color: $color-light;
-  width: 65%;
-  min-height: 55%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: $pad-xs;
-  left: 17.5%;
-  top: 10%;
-  transition: all 0.7s ease-out;
-  border-radius: 0.2rem;
+	position: fixed;
+	z-index: 500;
+	background-color: $color-light;
+	width: 65%;
+	min-height: 55%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: $pad-xs;
+	left: 17.5%;
+	top: 10%;
+	transition: all 0.7s ease-out;
+	border-radius: 0.2rem;
 
-  &-hide {
-    opacity: 0;
-    transform: translateY(-100vh);
-  }
+	&-hide {
+		opacity: 0;
+		transform: translateY(-100vh);
+	}
 
-  &-show {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	&-show {
+		opacity: 1;
+		transform: translateY(0);
+	}
 
-  @media (max-width: $bp-md) {
-    width: 90%;
-    min-height: 35%;
-    left: 5%;
-  }
+	@media (max-width: $bp-md) {
+		width: 90%;
+		min-height: 35%;
+		left: 5%;
+	}
 
-  button {
-    padding: 0.5rem;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    &:focus {
-      outline: none;
-    }
-  }
-  .close-icon {
-    font-size: 3rem;
-    color: $text-dark;
-    transition: all 1s;
-    &:hover {
-      transform: scale(1.1);
-      color: red;
-    }
-  }
+	button {
+		padding: 0.5rem;
+		border: none;
+		cursor: pointer;
+		background-color: transparent;
+		&:focus {
+			outline: none;
+		}
+	}
+	.close-icon {
+		font-size: 3rem;
+		color: $text-dark;
+		transition: all 1s;
+		&:hover {
+			transform: scale(1.1);
+			color: red;
+		}
+	}
 }
 
 // CAROUSEL
 .carousel {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
 
-  &-close {
-    display: none;
-  }
+	@media (max-width: $bp-lg) {
+		min-height: 55rem;
+	}
 
-  &-open {
-    display: contents;
-  }
+	@media (max-width: $bp-sm) {
+		min-height: 30rem;
+	}
 
-  &-section-top {
-    display: flex;
-    justify-content: center;
-  }
+	&-close {
+		display: none;
+	}
 
-  &-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+	&-open {
+		display: contents;
+	}
 
-  &-chevron {
-    color: $text-dark;
-    font-size: 4rem;
-    margin: 0 1rem;
-    cursor: pointer;
-    user-select: none;
-    @media (max-width: $bp-md) {
-      margin: 0.5rem;
-      font-size: 3rem;
-    }
+	&-section-top {
+		display: flex;
+		justify-content: center;
+	}
 
-    &-left {
-      position: fixed;
-      left: 0.5rem;
-      top: 43%;
-    }
+	&-img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
 
-    &-right {
-      position: fixed;
-      right: 0.5rem;
-      top: 43%;
-    }
-  }
+	&-chevron {
+		color: $text-dark;
+		font-size: 4rem;
+		margin: 0 1rem;
+		cursor: pointer;
+		user-select: none;
+		@media (max-width: $bp-md) {
+			margin: 0.5rem;
+			font-size: 3rem;
+		}
 
-  &-section-bottom {
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+		&-left {
+			position: fixed;
+			left: 0.5rem;
+			top: 43%;
+		}
 
-    .item-count {
-      font-size: 1.3rem;
-    }
+		&-right {
+			position: fixed;
+			right: 0.5rem;
+			top: 43%;
+		}
+	}
 
-    .item-description {
-      @media (max-width: $bp-sm) {
-        font-size: 1.5rem;
-      }
-    }
-  }
+	&-section-bottom {
+		background-color: transparent;
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		.item-count {
+			font-size: 1.3rem;
+		}
+
+		.item-description {
+			@media (max-width: $bp-sm) {
+				font-size: 1.5rem;
+			}
+		}
+	}
 }

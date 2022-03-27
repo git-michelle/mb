@@ -81,7 +81,7 @@ h3 {
   width: 21rem;
   min-height: 5rem;
   background-color: transparent;
-  color: #77cb5c;
+  color: #2e8540;
   border: 0.1rem solid #77cb5c; }
   .btn-outline:hover {
     background-color: #77cb5c;
@@ -172,6 +172,12 @@ ul {
   flex-direction: column;
   width: 100%;
   height: 100%; }
+  @media (max-width: 80em) {
+    .carousel {
+      min-height: 55rem; } }
+  @media (max-width: 37.5em) {
+    .carousel {
+      min-height: 30rem; } }
   .carousel-close {
     display: none; }
   .carousel-open {
