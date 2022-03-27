@@ -1,12 +1,12 @@
-import React from "react";
-import { CgMenu } from "react-icons/cg";
+import React from 'react';
+import { CgMenu } from 'react-icons/cg';
 
-const DrawerToggle = (props) => {
-  return (
-    <div className="burger" onClick={props.clicked}>
-      <CgMenu />
-    </div>
-  );
+const DrawerToggle = ({ clicked }) => {
+	return (
+		<div className="burger" onClick={clicked}>
+			<CgMenu />
+		</div>
+	);
 };
 
 export default DrawerToggle;

@@ -7,7 +7,7 @@ const Footer = () => {
       <p>&copy; {new Date().getFullYear()} Michelle B</p>
       <div className="links-container">
         <a
-          href="https://github.com/michellecan"
+          href="https://github.com/git-michelle"
           target="_blank"
           rel="noopener noreferrer"
         >
