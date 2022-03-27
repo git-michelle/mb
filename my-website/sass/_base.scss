@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
 
 // RESPONSIVE BREAKPOINTS
 $bp-lg: 80em; //1280px
@@ -17,12 +17,13 @@ $marg-sm: 3rem;
 $marg-xs: 1.5rem;
 
 @media (max-width: $bp-md) {
-  $pad-lg: 8rem;
-  $marg-lg: 8rem;
+	$pad-lg: 8rem;
+	$marg-lg: 8rem;
 }
 
 // COLOR VARIABLES
 $color-primary: #77cb5c;
+$color-primary-dark: #2e8540;
 $color-secondary: #e0bf24;
 $color-tertiary: #bd338e;
 
@@ -37,128 +38,128 @@ $text-light: #fff;
 h1,
 h2,
 h3 {
-  font-family: "Roboto Slab", serif;
-  color: $text-dark;
+	font-family: 'Roboto Slab', serif;
+	color: $text-dark;
 }
 
 h2,
 h3,
 h4 {
-  text-transform: uppercase;
-  line-height: 1.2;
-  color: $text-dark;
+	text-transform: uppercase;
+	line-height: 1.2;
+	color: $text-dark;
 }
 
 p,
 li {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.8rem;
-  line-height: 1.6;
-  color: $text-dark;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.8rem;
+	line-height: 1.6;
+	color: $text-dark;
 }
 
 .body-text {
-  font-size: 1.6rem;
-  color: $text-dark;
+	font-size: 1.6rem;
+	color: $text-dark;
 }
 
 h1 {
-  font-size: 8rem;
-  @media (max-width: $bp-sm) {
-    font-size: 3.5rem;
-  }
+	font-size: 8rem;
+	@media (max-width: $bp-sm) {
+		font-size: 3.5rem;
+	}
 }
 
 h2 {
-  font-size: 3rem;
+	font-size: 3rem;
 }
 
 h3 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 .section-heading {
-  margin-bottom: $marg-sm;
-  text-align: center;
+	margin-bottom: $marg-sm;
+	text-align: center;
 }
 
 .card-heading {
-  margin-bottom: $marg-xs;
+	margin-bottom: $marg-xs;
 }
 
 // CONTAINERS
 $page-content-width: 96rem;
 
 .container-centered-content {
-  max-width: $page-content-width;
-  margin: 0 auto;
-  padding: $pad-lg $pad-xs;
+	max-width: $page-content-width;
+	margin: 0 auto;
+	padding: $pad-lg $pad-xs;
 }
 
 .container-flex {
-  display: flex;
-  justify-content: center;
-  max-width: $page-content-width;
-  @media (max-width: $bp-md) {
-    flex-direction: column;
-  }
+	display: flex;
+	justify-content: center;
+	max-width: $page-content-width;
+	@media (max-width: $bp-md) {
+		flex-direction: column;
+	}
 }
 
 .full-width {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 // CONTAINER SHADOW
 .box-shadow {
-  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
 // BUTTONS
 %btn-shared {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.8rem 1.7rem;
-  border-radius: 0.2rem;
-  cursor: pointer;
-  font-size: 2rem;
-  overflow: hidden;
-  margin-top: $marg-sm;
-  transition: all 1s;
-  &:focus {
-    outline: none;
-  }
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	padding: 0.8rem 1.7rem;
+	border-radius: 0.2rem;
+	cursor: pointer;
+	font-size: 2rem;
+	overflow: hidden;
+	margin-top: $marg-sm;
+	transition: all 1s;
+	&:focus {
+		outline: none;
+	}
 }
 
 .btn {
-  &-outline {
-    @extend %btn-shared;
+	&-outline {
+		@extend %btn-shared;
 
-    width: 21rem;
-    min-height: 5rem;
-    background-color: transparent;
-    color: $color-primary;
-    border: 0.1rem solid $color-primary;
+		width: 21rem;
+		min-height: 5rem;
+		background-color: transparent;
+		color: $color-primary-dark;
+		border: 0.1rem solid $color-primary;
 
-    &:hover {
-      background-color: $color-primary;
-      color: $text-dark;
-    }
-  }
+		&:hover {
+			background-color: $color-primary;
+			color: $text-dark;
+		}
+	}
 }
 
 // SECTION DIVIDER
 .section-divider {
-  max-width: $page-content-width;
-  background-color: $color-primary;
-  border: none;
-  margin: 0 auto;
-  height: 0.1rem;
+	max-width: $page-content-width;
+	background-color: $color-primary;
+	border: none;
+	margin: 0 auto;
+	height: 0.1rem;
 
-  @media (max-width: $bp-md) {
-    max-width: 80%;
-  }
+	@media (max-width: $bp-md) {
+		max-width: 80%;
+	}
 }
 
 // BASICS
@@ -166,23 +167,23 @@ $page-content-width: 96rem;
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  @media only screen and (max-width: $bp-md) {
-    font-size: 55%;
-  }
+	box-sizing: border-box;
+	font-size: 62.5%;
+	@media only screen and (max-width: $bp-md) {
+		font-size: 55%;
+	}
 }
 
 body {
-  background-color: $color-light;
+	background-color: $color-light;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
